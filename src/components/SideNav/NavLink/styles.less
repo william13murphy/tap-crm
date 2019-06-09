@@ -1,0 +1,45 @@
+@import '../../../styles/_base.less';
+
+.NavLink {
+  position: relative;
+
+  a {
+    color: @white;
+    display: block;
+    padding: 20px 10px;
+    border-top: 1px solid @navy-hover;
+    border-bottom: 1px solid @navy-dark;
+    font-size: @font-size-small;
+    // transition: background-color 0.25s ease-in-out;
+    &:hover {
+      text-decoration: none;
+      background-color: @navy-hover;
+    }
+  }
+
+  &.selected {
+    background-color: @navy-dark;
+  }
+
+  .NavLink__title {
+    margin-left: 20px;
+  }
+
+  .NavLink__icon {
+    position: absolute;
+    top: 50%;
+    height: 15px;
+    width: 15px;
+    margin-top: -8px;
+    color: @white;
+    cursor: pointer;
+  }
+
+  .NavLink__icon__specific {
+    left: 10px;
+  }
+
+  .NavLink__icon__dropdown {
+    right: 10px;
+  }
+}

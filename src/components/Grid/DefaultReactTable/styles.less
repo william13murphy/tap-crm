@@ -1,0 +1,214 @@
+@import '../../../styles/_base.less';
+
+// Action Cell Styles
+.ReactTable {
+  .Action {
+    .Action__cell {
+      display: flex !important;
+      justify-content: center;
+
+      .Icon {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+// Added Total Records Count for a table
+.TotalRecordsCount {
+  text-align: right;
+  padding-bottom: 4px;
+  color: gray;
+  font-size: 12px;
+}
+
+// Remove filter icon from Action cell:
+.ReactTable.has-action .rt-th {
+  &:last-child {
+    &::after {
+      content: '' !important;
+    }
+  }
+}
+
+//Remove filter icon from Status cell for student leads
+.ReactTable.has-status .rt-th {
+  &:nth-child(6) {
+    &::after {
+      content: '' !important;
+    }
+  }
+}
+// Show cursor: pointer when hovering table rows
+.ReactTable.linked-row {
+  .rt-tbody {
+    .rt-tr-group {
+      flex: 0 0 auto; // Prevent row from growing vertically when only a few items in the table.
+      &:last-child {
+        border-bottom: solid 1px rgba(0, 0, 0, 0.05); // Override removing the border-bottom from the last item in table.
+      }
+    }
+
+    .rt-tr {
+      &:hover {
+        cursor: pointer;
+      }
+
+      .Modal {
+        cursor: auto;
+      }
+    }
+  }
+}
+
+.ReactTable__borders() {
+  border: none;
+
+  .rt-thead.-filters {
+    border-left: solid 1px rgba(0, 0, 0, 0.05);
+    border-right: solid 1px rgba(0, 0, 0, 0.05);
+  }
+
+  .rt-tbody {
+    border-left: solid 1px rgba(0, 0, 0, 0.05);
+    border-right: solid 1px rgba(0, 0, 0, 0.05);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.ReactTable {
+  background-color: @light-gray6;
+  .ReactTable__borders();
+
+  // No rows found message:
+  .rt-noData {
+    transform: translate(-50%, 55%);
+  }
+
+  .rt-tbody {
+    overflow-x: hidden; // prevent double scrollbar
+
+    .rt-tr {
+      border: 2px solid transparent;
+      min-height: 40px;
+
+      &:hover {
+        // Subtle hover effect
+        // background-color: @white;
+        // font-weight: @font-weight-medium;
+        // border: 2px solid @light-gray3;
+
+        // Outline hover effect
+        border: 2px solid @cyan;
+        // background-color: @white;
+      }
+    }
+
+    // Vertically center cell contents
+    .rt-td {
+      display: flex;
+      align-items: center;
+      white-space: normal;
+
+      .CellRight {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  // Filter styles
+  .rt-thead {
+    &.-header {
+      z-index: 1; // allow header to overlap filters
+      background-color: @cyan-dark;
+      // background-image: linear-gradient(0deg, @black, @dark-gray3);
+      color: @white;
+      font-weight: @font-weight-light;
+
+      // Sort Descending Styles
+      .rt-th.-sort-desc {
+        // box-shadow: inset 0 -3px 0 0 @gray1;
+        box-shadow: none;
+        // background-color: @cyan-dark-hover;
+        font-weight: @font-weight-normal;
+
+        &::after {
+          font-family: 'Icons16', sans-serif;
+          content: '\E732'; // Arrow down icon
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 14px;
+          color: @light-gray6;
+          pointer-events: none;
+        }
+      }
+
+      // Sort Ascending Styles
+      .rt-th.-sort-asc {
+        // box-shadow: inset 0 3px 0 0 @gray1;
+        box-shadow: none;
+        // background-color: @cyan-dark-hover;
+        font-weight: @font-weight-normal;
+
+        &::after {
+          font-family: 'Icons16', sans-serif;
+          content: '\E733'; // Arrow down icon
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 14px;
+          color: @light-gray6;
+          pointer-events: none;
+        }
+      }
+
+      .rt-resizable-header {
+        border-left: 1px solid @light-gray3;
+        border-right: 1px solid @light-gray3;
+
+        &:first-child {
+          border-left: none;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+
+    &.-filters {
+      .rt-th {
+        padding: 0;
+        background-color: @light-gray5;
+
+        &::after {
+          font-family: 'Icons16', sans-serif;
+          content: '\E638'; // filter icon
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 14px;
+          color: @cyan;
+          pointer-events: none;
+        }
+
+        input {
+          height: 30px;
+          font-size: 15px;
+          background-color: transparent;
+          border: 1px solid @white;
+
+          &:focus {
+            background-color: @white;
+            border: 2px solid @cyan;
+            border-radius: 0;
+            margin-right: 2px;
+          }
+        }
+      }
+    }
+  }
+}

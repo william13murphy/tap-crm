@@ -1,0 +1,112 @@
+@import '../../../../styles/_base.less';
+
+.PerfectAttendanceByStyleByDate {
+  h3,
+  .two-column div {
+    margin-bottom: 10px;
+  }
+
+  .SideNav__content {
+    padding: 20px;
+  }
+
+  .PageHeader,
+  .PageBody {
+    margin-left: @sidenav-width;
+    width: auto;
+  }
+
+  .pt-card {
+    border-radius: 0;
+    margin: 20px;
+    // max-height: 400px;
+  }
+
+  .Spinner {
+    background-color: @light-gray5;
+  }
+
+  .DateField {
+    .FieldGroup {
+      display: inline;
+    }
+
+    .pt-popover-wrapper {
+      display: block;
+    }
+
+    .pt-input-group {
+      margin-top: 0px;
+    }
+  }
+
+  .InputBlock {
+    @media @tablet-small {
+      display: block;
+
+      &.col3 > * {
+        display: block !important;
+        width: 100% !important;
+      }
+    }
+
+    @media @tablet-large {
+      display: block;
+
+      &.col3 > * {
+        display: block !important;
+        width: 100% !important;
+      }
+    }
+
+    @media @desktop-small {
+      display: flex;
+    }
+
+    &.col3 {
+      > * {
+        @media @tablet-small {
+          width: 100%;
+
+          &:first-child {
+            margin-right: 0%;
+          }
+
+          &:last-child {
+            margin-left: 0%;
+          }
+        }
+
+        @media @tablet-large {
+          width: 100%;
+
+          &:first-child {
+            margin-right: 0%;
+          }
+
+          &:last-child {
+            margin-left: 0%;
+          }
+        }
+
+        @media @desktop-small {
+          width: 100%;
+
+          &:first-child {
+            margin-right: 2%;
+          }
+
+          &:last-child {
+            margin-left: 2%;
+          }
+        }
+      }
+    }
+  }
+
+  .SelectProgram {
+    .Select__container .Select .Select-control {
+      margin-top: 0px !important;
+    }
+  }
+}

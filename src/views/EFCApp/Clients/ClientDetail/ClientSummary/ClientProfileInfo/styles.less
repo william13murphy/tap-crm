@@ -1,0 +1,57 @@
+@import '../../../../../../styles/_base.less';
+@import '../../../../../../styles/_mixins.less';
+
+.ClientProfileCard {
+  margin: 0;
+
+  .ProfileCard__card {
+    width: 100%;
+  }
+
+  .ProfileCard__picture__container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    .ProfileCard__picture {
+      width: 200px;
+    }
+
+    &:hover {
+      .ProfileCard__picture__edit {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: block;
+      }
+    }
+
+    .ProfileCard__picture__edit {
+      display: none;
+    }
+  }
+
+  .Profile__details {
+    width: 100%;
+    margin-left: 15px;
+  }
+
+  .Edit__profile {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10px 0;
+  }
+
+  table {
+    tr {
+
+      td.label {
+        min-width: 120px;
+      }
+
+      td.value {
+        width: 100%;
+      }
+    }
+  }
+}

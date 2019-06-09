@@ -1,0 +1,51 @@
+@import '../../../../../styles/_base.less';
+@import '../../../../../styles/_mixins.less';
+
+.UserProfileCard {
+  .ProfileCard__actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+  }
+
+  .DataCard {
+    box-shadow: 2px 2px 4px #d6d6d6;
+
+    &:hover {
+        box-shadow:  8px 8px 16px #d6d6d6;
+    }
+
+  }
+
+  table {
+    .default-table-striped();
+
+    margin-bottom: 20px;
+
+    &.default-table-shaded {
+      width: 100%;
+
+      tr:first-child {
+        border-top: none;
+      }
+
+      tr {
+        border: none;
+      }
+    }
+
+    td.label {
+      text-align: right;
+    }
+
+  }
+
+  .one-third {
+    display: flex;
+    justify-content: center;
+  }
+
+  .label {
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,540 @@
+@import './_base.less';
+@import './_forms_base.less';
+
+/*
+ * Mixins
+ */
+
+//Clearfix Mixin
+.clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.position-relative {
+  position: relative;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.h3-block {
+  background-color: @cyan-dark;
+  color: @white;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.mouse {
+  font-size: @font-size-x-small;
+}
+
+.font-weight-normal {
+  font-weight: normal;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.two-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  > div {
+    width: 100%;
+  }
+
+  @media @desktop-medium {
+    flex-direction: row;
+
+    > div {
+      flex-basis: 50%;
+    }
+  }
+}
+
+.one-third-two-third {
+  width: 100%;
+
+  @media @desktop-medium {
+    display: flex;
+    justify-content: space-between;
+
+    > div:first-child {
+      flex-basis: 33.3%;
+    }
+
+    > div:last-child {
+      flex-basis: 66.7%;
+    }
+  }
+}
+
+// Intent colors for text:
+.color-intent-success {
+  color: @pt-intent-success;
+}
+
+.color-intent-warning {
+  color: @pt-intent-warning;
+}
+
+.color-intent-danger {
+  color: @pt-intent-danger;
+}
+
+.color-intent-primary {
+  color: @pt-intent-primary;
+}
+
+.color-intent-normal {
+  color: darkblue;
+}
+
+.color-intent-calm {
+  color: #2980b9;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &::-webkit-scrollbar- {
+    display: none;
+  }
+}
+
+.flex-center-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.default-table-plain {
+  // width: 100%; // <- causes widespread issues
+
+  th {
+    font-weight: bold;
+    text-align: left;
+    padding-right: 10px;
+  }
+
+  tr {
+    td {
+      padding: 10px;
+
+      &.label {
+        font-weight: @font-weight-bold;
+      }
+
+      &.value {
+      }
+    }
+  }
+}
+
+// Puts a light gray border between <tr>'s for improved readability.
+.default-table-striped {
+  .default-table-plain();
+
+  tr {
+    border-bottom: 1px solid @light-gray1;
+
+    &:first-child {
+      border-top: 1px solid @light-gray1;
+    }
+  }
+}
+
+// Shades every other <tr> for improved readability.
+.default-table-shaded {
+  .default-table-plain();
+
+  tr {
+    &:nth-child(odd) {
+      background-color: @light-gray4;
+    }
+
+    td {
+      padding: 10px;
+    }
+  }
+}
+
+@button-box-shadow: 0 1px 3px @gray4;
+
+.disabled-button() {
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.disabled-button-color-dark() {
+  background-color: @gray3;
+  color: @gray1;
+}
+
+.disabled-button-color-light() {
+  background-color: @light-gray2;
+  color: @gray4;
+}
+
+.button-pt-intent-primary() {
+  color: @white;
+  background-color: @cyan-dark;
+
+  &:hover {
+    background-color: @cyan-dark-hover;
+  }
+
+  &:active {
+    background-color: @cyan-dark-hover;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: @cyan-dark-disabled;
+    .disabled-button();
+  }
+}
+
+.button-pt-intent-secondary() {
+  background-color: @dark-gray;
+  color: @white;
+
+  &:hover {
+    background-color: @dark-gray-hover;
+  }
+
+  &:active {
+    background-color: @dark-gray-hover;
+  }
+
+  &:disabled,
+  &.disabled {
+    .disabled-button();
+    .disabled-button-color-light();
+  }
+}
+
+.button-pt-intent-success() {
+  background-color: @olive;
+
+  &:hover {
+    background-color: @olive-hover;
+  }
+
+  &:active {
+    background-color: @olive-hover;
+  }
+
+  &:disabled,
+  &.disabled {
+    .disabled-button();
+    background-color: @pt-intent-success-disabled;
+  }
+}
+
+.button-pt-intent-warning() {
+  background-color: @orange;
+
+  &:hover {
+    background-color: @orange-hover;
+  }
+
+  &:active {
+    background-color: @orange-hover;
+  }
+
+  &:disabled,
+  &.disabled {
+    .disabled-button();
+    background-color: @pt-intent-warning-disabled;
+  }
+}
+
+.button-pt-intent-danger() {
+  background-color: @blood;
+
+  &:hover {
+    background-color: @blood-hover;
+  }
+
+  &:active {
+    background-color: @blood-hover;
+  }
+
+  &:disabled,
+  &.disabled {
+    .disabled-button();
+    background-color: @pt-intent-danger-disabled;
+  }
+}
+
+.button {
+  //Button Size
+  font-weight: @font-weight-light;
+  //
+  min-height: @input-height-default;
+  line-height: @input-height-default;
+  padding: @input-padding-default;
+
+  @media @tablet-small {
+    min-height: @input-height-tablet-small;
+    line-height: @input-height-tablet-small;
+    font-size: @input-font-size-tablet-small;
+    padding: @input-padding-tablet-small;
+  }
+
+  @media @desktop-large {
+    min-height: @input-height-desktop-large;
+    line-height: @input-height-desktop-large;
+    font-size: @input-font-size-desktop-large;
+    padding: @input-padding-desktop-large;
+  }
+
+  // Button styles & intent colors
+
+  box-shadow: @button-box-shadow;
+
+  &:hover {
+    box-shadow: @button-box-shadow;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: none;
+  }
+
+  &:not(.pt-intent-primary):not(.pt-intent-secondary):not(.pt-intent-success):not(.pt-intent-danger):not(.pt-intent-warning) {
+    // background: linear-gradient(to bottom, rgba(255,255,255,0) 33%, #e8f7fa 100%);
+    //
+    // &:hover {
+    //   box-shadow: 0 1px 3px @gray4;
+    //   background: linear-gradient(to bottom, rgba(246,252,254,1) 33%, #e2f3f7 100%);
+    // }
+
+    &:active {
+      //background: #e8f7fa;
+      box-shadow: inset 0 0 3px @light-bluegray1;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0)
+      );
+    }
+
+    &:hover {
+      background-color: @cyan-dark-light;
+    }
+
+    color: @cyan-dark;
+
+    &::before {
+      color: @cyan-dark;
+    }
+  }
+
+  &.pt-intent-primary {
+    .button-pt-intent-primary();
+  }
+
+  &.pt-intent-secondary {
+    .button-pt-intent-secondary();
+  }
+
+  &.pt-intent-success {
+    .button-pt-intent-success();
+  }
+
+  &.pt-intent-warning {
+    .button-pt-intent-warning();
+  }
+
+  &.pt-intent-danger {
+    .button-pt-intent-danger();
+  }
+}
+
+.flex {
+  display: flex;
+
+  &.align-items-center {
+    align-items: center;
+  }
+}
+
+.Calendar-defaults {
+  // Fix flexbox so the calendar shows. Caused by flex-basis: 0, by default.
+  .rbc-agenda-view,
+  .rbc-month-view,
+  .rbc-month-row {
+    flex: 1 0 auto;
+  }
+
+  // In month view, show days as a square
+  .rbc-month-row {
+    > .rbc-row-content {
+      min-height: 120px;
+    }
+  }
+
+  .rbc-toolbar-label {
+    font-weight: @font-weight-light;
+  }
+
+  .rbc-toolbar {
+    background-color: @cyan-dark;
+    height: 27px;
+    color: @white;
+    margin-bottom: 0;
+  }
+
+  .rbc-time-content {
+    border-top: 1px solid @light-gray3;
+  }
+
+  .rbc-current-time-indicator {
+    z-index: 3;
+    background-color: @blood;
+    margin: auto;
+  }
+
+  .rbc-current-time-indicator::before {
+    background-color: @blood;
+  }
+
+  .rbc-allday-cell {
+    min-height: 30px;
+  }
+
+  // Weekly Agenda view
+  .rbc-toolbar > .rbc-btn-group {
+    > button {
+      background-color: @white;
+      cursor: pointer;
+      border-radius: 0;
+
+      &.rbc-active {
+        background-color: @light-gray3;
+      }
+    }
+
+    &:nth-child(3) {
+      > button {
+        // Hide "Agenda" view
+        &:nth-child(3) {
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+        // Hide "Agenda" view
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+    //
+    // &:nth-child(1) {
+    //   display: none;
+    // }
+  }
+
+  .rbc-agenda-date-cell {
+    font-weight: bold;
+  }
+}
+
+.DayCalendar-defaults {
+  .rbc-day-slot,
+  .rbc-allday-cell,
+  .rbc-row-bg {
+    background-color: @light-gray6;
+  }
+
+  .rbc-timeslot-group {
+    border-bottom: 1px solid @light-gray3;
+  }
+
+  .rbc-event {
+    color: @black;
+    background-color: @light-gray3;
+    border-color: @gray3;
+  }
+
+  .rbc-time-header {
+    .rbc-row:first-child {
+      > .rbc-header {
+        padding-top: 4px;
+      }
+    }
+
+    .rbc-allday-cell .rbc-row-bg .rbc-today {
+      background-color: @light-gray6;
+    }
+  }
+}
+
+.WeekCalendar-defaults {
+  .rbc-day-slot,
+  .rbc-allday-cell,
+  .rbc-row-bg {
+    background-color: @light-gray6;
+  }
+
+  .rbc-timeslot-group {
+    border-bottom: 1px solid @light-gray3;
+  }
+
+  .rbc-event {
+    color: @black;
+    background-color: @light-gray3;
+    border-color: @gray3;
+    width: 100% !important;
+  }
+}
+
+// Styles for icons inside of pt-input-groups
+.pt-icon-styles() {
+  line-height: @input-height-default;
+  pointer-events: none;
+
+  @media @tablet-small {
+    line-height: @input-height-tablet-small;
+    font-size: 18px;
+  }
+
+  @media @desktop-large {
+    line-height: @input-height-desktop-large;
+    font-size: 21px;
+  }
+}
+
+.pt-icon-margins() {
+  margin: 0 9px;
+
+  @media @desktop-large {
+    margin: 0 11px;
+  }
+}
+
+.disabled-link {
+  pointer-events: none;
+}

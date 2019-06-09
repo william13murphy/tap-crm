@@ -1,0 +1,34 @@
+@import '../../../../styles/_base.less';
+
+.Page.CheckInPage {
+  .PageHeader {
+    .KioskLogOutButton {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  .PageBody {
+    padding-top: 20px;
+
+    .ReactTable {
+      margin: 10px 0px;
+    }
+  }
+
+  .Modal {
+    .Modal__window {
+      height: auto;
+      max-height: 90%;
+
+      .Modal__window__content {
+        min-height: 200px;
+        padding: 40px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../../../../styles/_base.less';
+
+.ClientContactsPage {
+  .Fieldset__toolbar {
+    padding-bottom: 10px;
+
+    .pt-button {
+      margin-right: 10px;
+    }
+  }
+
+  .ClientContacts__title {
+    margin-bottom: 10px;
+  }
+
+  .ClientContacts__internal {
+    padding-bottom: 20px;
+  }
+
+  .ClientContacts__external {
+    .ReactTable {
+      margin: 10px 0 20px;
+    }
+  }
+}
+
+.ContactCard {
+  margin: 0 10px 0 0;
+  position: relative;
+  display: inline-block;
+
+  .Contact__toolbar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

@@ -1,0 +1,18 @@
+@import '../../../../../../styles/_base.less';
+
+.Pie__crust {
+  display: flex;
+  justify-content: center;
+}
+
+.recharts-pie-sector {
+  &:hover {
+    > path {
+      opacity: 0.75;
+    }
+  }
+}
+
+.recharts-pie-labels {
+  pointer-events: none;
+}

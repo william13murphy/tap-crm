@@ -1,0 +1,63 @@
+@import '../../../styles/_base.less';
+
+.Module.ReportsModule {
+  h3,
+  .two-column div {
+    margin-bottom: 10px;
+  }
+
+  .SideNav__content {
+    padding: 20px;
+  }
+
+  .PageHeader,
+  .PageBody {
+    margin-left: @sidenav-width;
+    width: auto;
+  }
+
+  .Reports__list {
+    .Collapsible {
+      a {
+        display: block;
+        padding: 5px;
+        margin-bottom: 5px;
+        border: 1px solid #eee;
+
+        &.disabled {
+          color: @gray1;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  .pt-card {
+    border-radius: 0;
+    margin: 22px;
+    // max-height: 400px;
+  }
+
+  .Spinner {
+    background-color: @light-gray5;
+  }
+
+  .export-button {
+    margin-bottom: 10px;
+  }
+
+  .grid-title {
+    margin-bottom: 5px;
+  }
+
+  .GenericReportFormContainer {
+    width: 100% !important;
+  }
+
+  .FormButtonsContainer {
+    .SubmitButton {
+      margin-bottom: 1em;
+      margin-right: 10px;
+    }
+  }
+}

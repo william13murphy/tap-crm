@@ -1,0 +1,22 @@
+@import '../../../../styles/_base.less';
+@import '../../../../styles/_mixins.less';
+
+.AllStudentsPage {
+  .CreateExternalUserChoice {
+    .flex-center-all();
+
+    min-height: @modal-min-height - 20;
+  }
+
+  .AllStudentsPage__action_container {
+    display: flex;
+
+    > .AllStudentsPage__action_item {
+      margin: 5px;
+
+      .AllStudentsPage__action_title {
+        padding-left: 10px;
+      }
+    }
+  }
+}

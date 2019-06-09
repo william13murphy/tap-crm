@@ -1,0 +1,27 @@
+@import '../../../../../styles/_base.less';
+
+.ClientAddressesPage {
+  .AddressCards {
+    @media @desktop-medium {
+      .AddressCard__wrapper {
+        width: 49%;
+        display: inline-block;
+
+        &:nth-child(even) {
+          margin-left: 2%;
+        }
+      }
+    }
+  }
+}
+
+.AddressCard {
+  margin: 10px 0;
+  position: relative;
+
+  .AddressCard__toolbar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

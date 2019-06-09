@@ -1,0 +1,162 @@
+@import '../../../../styles/_base.less';
+@import '../../../../styles/_colors.less';
+
+.CustomerTypePage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  display: block;
+  background-color: @light-gray5;
+
+  .CustomerTypePage__title {
+    display: flex;
+    justify-content: center;
+  }
+
+  .CustomerTypePage__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .CustomerTypePage__buttons {
+      width: 51%;
+    }
+  }
+
+  > h1 {
+    color: @navy;
+    text-align: left;
+    padding: 20px;
+  }
+
+  width: 100%;
+  height: 100%;
+
+  .PageTitle {
+    text-align: left;
+  }
+
+  .Footer {
+    margin: 20px auto;
+    display: flex;
+    background-color: @light-gray5;
+  }
+
+  .Footer__link {
+    width: 200px;
+  }
+
+  .Student.pt-button.pt-intent-primary.pt-active {
+    margin-right: 10px;
+  }
+
+  .PublicContainer__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .PublicContainer {
+    width: 100%;
+    background-color: @light-gray5;
+
+    @media @tablet-small {
+      width: 50%;
+    }
+
+    .PublicContainer__list {
+      overflow: auto;
+      height: auto;
+      max-height: 400px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      background-color: @light-gray5;
+      box-shadow: 0 1px 4px @gray4;
+    }
+
+    .PublicContainer__header {
+      background-color: @cyan;
+      color: @white;
+      font-size: 1.2em;
+      padding: 20px;
+    }
+
+    .PublicContainer__name {
+      padding: 20px 20px 0;
+      width: 100%;
+    }
+
+    .PublicContainer__email {
+      padding: 0 20px 20px;
+      width: 100%;
+    }
+  }
+
+  .ButtonGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.5em 0;
+
+    .pt-button {
+      width: 46%;
+      margin: 0 0 0 0;
+    }
+  }
+
+  button.Footer__link {
+    margin-top: 2em;
+    width: 100%;
+  }
+
+  .StudentList {
+    box-shadow: none;
+
+    .TotalRecordsCount {
+      display: none;
+    }
+
+    .ReactTable > .rt-table {
+
+      > .rt-thead {
+        &:first-child {
+          display: none;
+        }
+
+        &:nth-child(2) {
+          height: 4em;
+          background: white;
+          margin: 1em 0;
+          border-radius: 2em;
+
+          &:hover {
+            border: 2px solid #1c88a3;
+          }
+
+          .rt-th {
+            background: transparent;
+          }
+
+          span.StudentList__searchIcon.pt-icon.pt-icon-search {
+              padding-left: 20px;
+              opacity: 0.5;
+          }
+
+          input.StudentList__search {
+            height: 4em;
+            border: none;
+            background: transparent;
+            justify-content: center
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+}

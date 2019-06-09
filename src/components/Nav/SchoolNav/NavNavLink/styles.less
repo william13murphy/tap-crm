@@ -1,0 +1,148 @@
+@import '../../../../styles/_base.less';
+
+@Navlink--transition-speed: 0.1s;
+
+.Navlink--hover--active() {
+  > img {
+    transform: scale(0.75) translateY(-7px);
+  }
+
+  > span {
+    transform: translateY(-7px);
+  }
+}
+
+@efc-nav-color: @cyan-bright;
+
+.SchoolNav > nav,
+.EFCNav > nav {
+  .Nav__navlink {
+    display: none;
+    color: @nav-text-color;
+
+    &.efc-nav {
+      color: @efc-nav-color;
+
+      &.active {
+        color: @efc-nav-color;
+
+        > button.Nav__navlink__item.pt-button {
+          box-shadow: inset 0 -3px 0 @efc-nav-color;
+        }
+      }
+    }
+
+    &.active {
+      background: @nav-background-active;
+      color: @nav-text-color-active;
+      background-color: @blue1;
+
+      > button.Nav__navlink__item.pt-button {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        box-shadow: inset 0 -3px 0 @blue1;
+        .Navlink--hover--active();
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      button.Nav__navlink__item.pt-button {
+        color: @nav-text-color-active;
+      }
+    }
+
+    button.Nav__navlink__item.pt-button {
+      height: @nav-height;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-size: 14px;
+
+      > .Nav__navlink__item__title {
+        color: @nav-text-color;
+      }
+
+      > i::before,
+      &::before {
+        color: @nav-text-color; // Fix for search button
+      }
+
+      // Rollover effect --start--:
+      overflow-y: hidden;
+
+      > img {
+        margin-top: 10px;
+        transition: @Navlink--transition-speed all ease-in-out;
+      }
+
+      > span {
+        transform: translateY(12px);
+        transition: @Navlink--transition-speed all ease-in-out;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: @font-weight-semibold;
+      }
+      // Rollover effect --end--
+
+      &:hover {
+        .Navlink--hover--active();
+      }
+
+      &:focus {
+        outline: none;
+        color: @nav-text-color;
+
+        > i::before,
+        &::before {
+          color: @nav-text-color;
+        }
+      }
+    }
+  }
+
+  @media @tablet-small {
+    .Nav__navlink {
+      display: block;
+    }
+
+    .Nav__navlink__item::before {
+      display: block;
+      font-size: 32px;
+      margin-top: 11px;
+      margin-right: 0;
+    }
+
+    .Nav__navlink__item > i {
+      display: block;
+      margin-top: 10px;
+
+      &::before {
+        font-size: 28px;
+      }
+    }
+  }
+
+  @media @desktop-small {
+    .Nav__navlink__item {
+      padding: 0 15px;
+    }
+  }
+
+  @media @desktop-medium {
+    .Nav__navlink__item {
+      padding: 0 20px;
+    }
+  }
+
+  @media @desktop-large {
+    .Nav__navlink__item {
+      padding: 0 25px;
+    }
+  }
+}

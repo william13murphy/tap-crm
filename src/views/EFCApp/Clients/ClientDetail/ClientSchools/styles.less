@@ -1,0 +1,45 @@
+@import '../../../../../styles/_base.less';
+
+.ClientSchoolsPage {
+  .PageBody {
+    .AddClass {
+      padding-bottom: 5px !important;
+    }
+  }
+  .SchoolCard {
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: border 0.25s ease-in-out;
+
+    &:hover {
+      background-color: @light-gray4;
+      cursor: pointer;
+    }
+
+    &:active {
+      // box-shadow: none;
+      // border: 1px solid @gray5;
+      background-color: @light-gray4;
+    }
+
+    .SchoolCard__logo {
+      height: 80px;
+      margin-right: 20px;
+      width: auto;
+      user-select: none;
+    }
+
+    .SchoolCard__title {
+      user-select: none;
+    }
+
+    .School__toolbar {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../../styles/_base.less';
+
+.iconfield-left-padding() {
+  padding-left: 30px;
+
+  @media @tablet-small {
+    padding-left: 32px;
+  }
+
+  @media @desktop-large {
+    padding-left: 40px;
+  }
+}
+
+.TimeField {
+  // .pt-input-group .pt-icon {
+  //   margin: 5px 11px 0;
+  // }
+
+  // display: inline-flex;
+  // width: auto;
+
+  .FieldGroup {
+    display: flex;
+  }
+
+  .pt-input-group {
+    margin-top: 5px;
+
+    .pt-icon {
+      color: @input-icon-color;
+    }
+  }
+
+  .TimeInput .TimeInput__TimePicker.rc-time-picker input.rc-time-picker-input {
+    .iconfield-left-padding();
+
+    &:disabled {
+      color: @dark-gray6;
+      font-weight: @font-weight-regular;
+      border: none;
+    }
+  }
+}
+
+input.rc-time-picker-panel-input {
+  .iconfield-left-padding();
+}

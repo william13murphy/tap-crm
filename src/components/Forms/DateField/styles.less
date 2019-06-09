@@ -1,0 +1,66 @@
+@import '../../../styles/_base.less';
+@import '../../../styles/_forms_base.less';
+
+.iconfield-left-padding() {
+  padding-left: 30px;
+
+  @media @tablet-small {
+    padding-left: 32px;
+  }
+
+  @media @desktop-large {
+    padding-left: 40px;
+  }
+}
+
+.DateInput__container {
+  &.touched {
+    &.error {
+      input {
+        border-color: transparent;
+        .input-error-style();
+      }
+    }
+  }
+}
+
+.DateField {
+  // Keep pop-up calendar in view by setting min-width on input === popup width
+  .pt-popover-target {
+    min-width: 230px;
+  }
+
+  // Hide datepicker arrow because it's overlapping
+  .pt-icon-standard.pt-icon-caret-down.pt-datepicker-caption-caret {
+    display: none !important;
+  }
+
+  margin: 0 0 15px;
+
+  label.pt-label {
+    margin-bottom: 0;
+  }
+
+  // Compensate for calendar icon
+  input.pt-input {
+    .iconfield-left-padding();
+
+    &:disabled {
+      color: @dark-gray6;
+      background-color: @light-gray4;
+    }
+  }
+
+  .FieldGroup {
+    display: flex;
+    margin-bottom: 5px;
+  }
+
+  > .pt-input-group {
+    margin-top: 5px;
+
+    .pt-icon {
+      color: @input-icon-color;
+    }
+  }
+}

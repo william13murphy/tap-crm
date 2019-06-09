@@ -1,0 +1,22 @@
+@import '../../../styles/_base.less';
+
+.FormWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media @tablet-small {
+    width: 80%;
+  }
+
+  @media @desktop-small {
+    max-width: 700px;
+  }
+
+  @media @desktop-large {
+    max-width: 800px;
+  }
+
+  // padding-bottom: 80px; // [Removed with 85eb070]: Leave enough room for Select at bottom of forms.
+}

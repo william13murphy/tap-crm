@@ -1,0 +1,48 @@
+@import '../../../styles/_mixins.less';
+
+.Module.SchoolInfoModule {
+  table {
+    .default-table-plain();
+  }
+
+  .TimelineTable {
+    width: 100%;
+  }
+
+  .InfoCard {
+    margin: 20px;
+    box-shadow: 0 3px 10px @gray4;
+    background-color: @white;
+    border-radius: 3px;
+    color: @dark-gray5;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .InfoCard__header {
+    flex: 1;
+    background-color: @cyan;
+    padding: 20px;
+    max-height: 60px;
+
+    > h3 {
+      color: @white;
+    }
+  }
+
+  .InfoCard__body {
+    flex: 2;
+    padding: 20px;
+    font-size: 16px;
+    color: @dark-gray5;
+
+    .InfoCardTable {
+      height: auto !important;
+      overflow: auto !important;
+    }
+  }
+
+  .DataCard__title {
+    color: @dark-gray5;
+  }
+}

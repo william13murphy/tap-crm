@@ -1,0 +1,83 @@
+@import '../../../styles/_base.less';
+
+.EFCApp .EFCNav {
+  > .pt-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: @efc-nav-height;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    box-shadow: inset 0 -1px 0 0 #444;
+    background: @efc-nav-background;
+    z-index: 12;
+  }
+
+  .pt-navbar-group {
+    height: @efc-nav-height;
+    padding: 0 3% 0 3%;
+
+    &:first-child {
+      flex-grow: 1;
+    }
+  }
+
+  .EFCNavLinks__NavLink,
+  .UserMeFullName {
+    display: inline-flex;
+    padding: 0 10px;
+    height: @efc-nav-height;
+    align-items: center;
+    color: @white;
+    cursor: pointer;
+
+    &.active {
+      // color: @cyan;
+      background-color: @efc-navlink-background;
+      box-shadow: inset 0 -2px 0 0 @white;
+    }
+
+    &:hover {
+      background-color: @efc-navlink-background;
+      color: @cyan-hover;
+    }
+  }
+
+  //Temporarily override Nav__navlink behavior:
+  .Nav__navlink .Nav__navlink__item {
+    height: @efc-nav-height !important;
+
+    .Nav__navlink__item__image {
+      height: @efc-nav-height - 10;
+      width: @efc-nav-height - 10;
+    }
+
+    &:hover {
+      .Nav__navlink__item__image {
+        transform: scale(1) translateY(-7px) !important;
+      }
+
+      .Nav__navlink__item__title {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.logoContainer {
+  position: relative;
+
+  p.beta {
+    position: absolute;
+    font-size: 8px;
+    background: green;
+    color: white;
+    padding: 2px;
+    border-radius: 4px;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../../styles/_base.less';
+@import '../../../styles/_forms_base.less';
+
+.pt-input-group .ValidatedFileInput > input.pt-input {
+  display: flex;
+  height: 28px;
+  padding-top: 5px;
+  padding-left: 2px;
+  box-shadow: none;
+}
+
+.ValidatedFileInput {
+  .input-flags {
+    .input-flags-style();
+  }
+  // success:
+  // &.touched {
+  //   background-color: @green10;
+  // }
+
+  .error {
+    &.touched {
+      .input-error-style();
+    }
+  }
+}

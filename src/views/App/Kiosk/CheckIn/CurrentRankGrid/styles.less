@@ -1,0 +1,26 @@
+@import '../../../../../styles/_base.less';
+
+.CurrentRankGrid {
+  .Skills__cell {
+    display: flex;
+  }
+
+  .CurrentRankGrid__details {
+    display: flex;
+    flex-direction: row;
+
+    .ProfileCard__picture {
+      border: 1px solid @light-gray3;
+      max-height: 230px;
+      margin: 10px 10px 10px 0px;
+    }
+
+    .current-rank {
+      width: 100%;
+    }
+
+    .default + .current-rank {
+      width: 90%;
+    }
+  }
+}

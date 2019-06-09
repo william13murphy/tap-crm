@@ -1,0 +1,98 @@
+@import '../../../../../styles/_base.less';
+// @import '../../../../../styles/_mixins.less';
+
+.TodayPage {
+  .ClockInOutModule {
+    .Modal__window__content {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  }
+  .SchoolHealthDataCard {
+    @media @desktop-small {
+      margin: 0;
+    }
+  }
+
+  .PageHeader {
+    padding-top: 0; // hack to fix header being on bottom of page for now...
+  }
+
+  .Dashboard__subtitle {
+    text-align: center;
+    position: absolute;
+    bottom: 50%;
+    margin-bottom: -10px;
+    left: 50%;
+  }
+
+  .DashboardLeft__wrapper,
+  .DashboardRight__wrapper {
+    margin-top: 20px;
+
+    .DashboardLeft__header,
+    .DashboardRight__header {
+      position: relative;
+      margin-bottom: 5px;
+    }
+
+    &:first-child {
+      margin-right: 1%;
+    }
+
+    &:last-child {
+      margin-left: 1%;
+    }
+  }
+
+  .DashboardLeft__wrapper {
+    padding-bottom: 20px;
+
+    .DashboardLeft__header {
+      // min-height fix for clock in-out "header twitch" bug:
+      min-height: 40px;
+      @media @desktop-large {
+        min-height: 46px;
+      }
+
+      .Dashboard__subtitle {
+        margin-left: -72px; // make-shift horizontal centering
+      }
+    }
+  }
+
+  .DashboardRight__wrapper {
+    padding-bottom: 20px;
+
+    .DashboardRight__header {
+      min-height: 40px;
+      @media @desktop-large {
+        min-height: 46px;
+      }
+      .Dashboard__subtitle {
+        margin-left: -60px; // make-shift horizontal centering
+      }
+
+      .TaskList__actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+
+    .DashboardRight__link {
+      margin-right: 5px;
+    }
+
+    .FlaggedNotesPreview {
+      border: 1px solid @gray5;
+      overflow: auto;
+
+      .DataCard {
+        margin-top: 0;
+      }
+    }
+  }
+}

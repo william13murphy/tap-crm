@@ -1,0 +1,24 @@
+@import '../../../styles/_base.less';
+
+.SubmitButton {
+  &.disabled {
+    background-color: @light-gray3;
+  }
+}
+
+.SubmitButton.pt-button.fancy {
+  width: 100%;
+  background-color: @nav-background;
+  box-shadow: 0 2px 8px @gray3;
+  transition: 0.25s background-color ease-in-out, 0.25s background-color ease-in-out;
+
+  &:hover {
+    box-shadow: 0 2px 8px @gray3;
+    background-color: @nav-background-hover;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 0 @gray1;
+  }
+}

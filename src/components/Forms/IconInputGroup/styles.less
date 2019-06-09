@@ -1,0 +1,90 @@
+@import '../../../styles/_forms_elements.less';
+
+// TODO : Specify icon-left or icon-right. Need to really make this into a discrete component:
+.IconInputGroup {
+  .pt-input-group {
+    .pt-icon.pt-icon {
+      line-height: 34px; // === @input-height-default;
+      pointer-events: none;
+
+      @media @tablet-small {
+        line-height: 48px; // @input-height-tablet-small;
+        font-size: 18px;
+      }
+
+      @media @desktop-large {
+        line-height: 54px; // @input-height-desktop-large;
+        font-size: 21px;
+      }
+    }
+
+    .fa {
+      position: absolute;
+      top: 50%;
+      margin-top: -8px;
+      color: @green2;
+      font-size: 18px;
+      line-height: 18px;
+
+      @media @tablet-small {
+        font-size: 18px;
+      }
+
+      @media @desktop-large {
+        font-size: 21px;
+      }
+
+      &.icon-left {
+        left: 9px;
+      }
+
+      &.icon-right {
+        right: 9px;
+      }
+    }
+  }
+
+  // Adds padding to compensate for icon inside of <input /> (icon on the left)
+  .pt-input-group input.pt-input {
+    padding: @input-padding-default;
+
+    &.icon-left {
+      padding-left: @input-with-icon-padding-left-default;
+
+      @media @tablet-small {
+        padding-left: @input-with-icon-padding-left-tablet-small;
+      }
+
+      @media @desktop-large {
+        padding-left: @input-with-icon-padding-left-desktop-large;
+      }
+    }
+
+    &.icon-right {
+      padding-right: @input-with-icon-padding-left-default;
+
+      @media @tablet-small {
+        padding-right: @input-with-icon-padding-left-tablet-small;
+      }
+
+      @media @desktop-large {
+        padding-right: @input-with-icon-padding-left-desktop-large;
+      }
+    }
+  }
+
+  // TODO: This works for the search input, but breaks the calendar input.
+  // Adds padding to compensate for icon inside of <input /> (icon on the right)
+  // .pt-input-group input.pt-input:first-child {
+  //   padding: @input-padding-default;
+  //   padding-right: @input-with-icon-padding-left-default;
+  //
+  //   @media @tablet-small {
+  //     padding-right: @input-with-icon-padding-left-tablet-small;
+  //   }
+  //
+  //   @media @desktop-large {
+  //     padding-right: @input-with-icon-padding-left-desktop-large;
+  //   }
+  // }
+}

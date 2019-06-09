@@ -1,0 +1,35 @@
+@import '../../../styles/_colors.less';
+
+.SwitchField {
+  margin-top: 5px;
+
+  .SwitchField__label {
+    user-select: none;
+
+    .ContextHelp {
+      display: inline-flex;
+    }
+  }
+
+  // Override blueprint colors
+  input:checked
+    ~ .pt-control-indicator.pt-control-indicator.pt-control-indicator,
+  input:indeterminate
+    ~ .pt-control-indicator.pt-control-indicator.pt-control-indicator {
+    background-color: @cyan-dark;
+  }
+
+  input:not(:disabled):active:checked
+    ~ .pt-control-indicator.pt-control-indicator.pt-control-indicator {
+    background-color: @cyan-dark-hover;
+  }
+
+  &:hover {
+    input:checked
+      ~ .pt-control-indicator.pt-control-indicator.pt-control-indicator,
+    input:indeterminate
+      ~ .pt-control-indicator.pt-control-indicator.pt-control-indicator {
+      background-color: @cyan-dark-hover;
+    }
+  }
+}

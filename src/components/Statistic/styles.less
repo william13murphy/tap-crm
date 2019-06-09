@@ -1,0 +1,73 @@
+@import '../../styles/_base.less';
+
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+
+.Statistic {
+
+    // border: 1px dotted yellow;
+    width: 160px;
+    height: 132px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: @white;
+    padding: 16px 16px;
+    box-shadow: 4px 4px 8px @gray4;
+    font-weight: 200;
+    transition: .3s ease-in-out;
+    pointer-events: fill;
+    margin: 16px 16px;
+    cursor: pointer;
+    position: relative;
+
+
+    &:hover{
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transition: .3s ease-in-out;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-font-smoothing: subpixel-antialiased;
+        display: inline-table;
+        box-shadow: 8px 8px 32px @gray4;
+
+    }
+    
+    .blinkingDot {
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        animation: blink-animation 2s steps(5, start) infinite;
+        -webkit-animation: blink-animation 2s steps(5, start) infinite;
+        background-color: white;
+        
+    }
+
+    .Value {
+        font-size: 72px;
+        color: blue;
+        height: 72%;
+    }
+    .Label {
+        text-transform: capitalize;
+        font-size: 16px;
+        color: @navy-dark;
+        height: 28%;
+        text-align: center;
+        font-weight: normal;
+        width: '70%';
+    }
+}

@@ -1,0 +1,15 @@
+language: node_js
+cache:
+  yarn: true
+  directories:
+    - node_modules
+node_js:
+  - "11.0.0"
+after_success: yarn run coverage
+after_script: 'export BRANCH=dev;[[ $TRAVIS_BRANCH =~ ^master_(.*)$ ]] && export BRANCH=${BASH_REMATCH[1]}; chmod 400 key.pem; scp -o StrictHostKeyChecking=no -i key.pem -r built/* root@137.135.113.29:/usr/share/nginx/${BRANCH}/;ssh -o StrictHostKeyChecking=no -i key.pem root@137.135.113.29 "service nginx stop; service nginx start"'
+script:
+  - npm run build
+branches:
+  only:
+  - master
+  - /^master_.*/

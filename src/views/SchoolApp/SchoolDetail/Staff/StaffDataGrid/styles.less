@@ -1,0 +1,39 @@
+@import '../../../../../styles/_base.less';
+
+.StaffContainer {
+  .Staff {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .Staff__name {
+    font-size: 14px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    white-space: normal;
+  }
+
+  .Staff__image {
+    width: auto;
+    height: 50px;
+
+    @media @tablet-small {
+      height: 75px;
+    }
+  }
+
+  .disabled {
+    a {
+      box-shadow: none;
+      color: @gray1 !important;
+      pointer-events: none;
+
+      &:hover {
+        background-color: @light-bluegray3 !important;
+      }
+    }
+  }
+}

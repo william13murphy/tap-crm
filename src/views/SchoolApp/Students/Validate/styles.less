@@ -1,0 +1,86 @@
+
+
+.ValiadteScannedDoc {
+    max-width: 100%;
+    max-height: 100%;
+
+    div {
+        border-radius: 4px;
+    }
+    
+    .ActionButtons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        button {
+            margin: 10px;
+
+            &::before {
+                margin-right: 4px;
+            }
+        }
+
+
+    }
+
+    .Main {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: space-around;
+        min-height: 100vh;
+        padding: 10px;
+        margin: 0 auto;
+        width: 96%;
+
+        .Img {
+            min-width: 68%;
+            box-shadow: 2px 2px 4px #d6d6d6;
+            border-radius: 4px;
+            margin: 20px;
+
+            &:hover {
+                box-shadow:  8px 8px 16px #d6d6d6;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                width: 100%;
+                padding: 10px;
+            }
+        }
+        .Form {
+            min-width: 32%;
+            margin: 10px;
+            box-shadow: 2px 2px 4px #d6d6d6;
+            border-radius: 4px;
+            background-color: white;
+
+            &:hover {
+                box-shadow:  8px 8px 16px #d6d6d6;
+            }
+
+            h4 {
+                margin-left: 12px;
+                margin-top: 8px;
+                margin-bottom: 4px;
+            }
+
+            div {
+                border: none;
+                border-radius: 0;
+                border: 0px solid transparent;
+                box-shadow: none;
+            }
+
+            tbody > tr > td:first-child {
+                color: gray;
+                font-size: 14px;
+                text-align: right;
+                width: 40%;
+                
+            }
+        }
+    }
+}

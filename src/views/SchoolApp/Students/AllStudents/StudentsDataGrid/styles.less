@@ -1,0 +1,33 @@
+@import '../../../../../styles/_base.less';
+
+.StudentsDataGrid {
+  .SendEmail__cell {
+    color: @cyan;
+  }
+
+  .rt-thead.-filters {
+    .rt-th {
+      &:last-child {
+        select {
+          margin-top: 4px;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .disabled {
+    a {
+      box-shadow: none;
+      color: @gray1 !important;
+      pointer-events: none;
+
+      &:hover {
+        background-color: @light-bluegray3 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import '../../../../../../../styles/_base.less';
+
+.ActivePlanIndicator {
+  // display: none;
+  //
+  // @media @tablet-small {
+  //   display: inline;
+  // }
+
+  &.plan-active {
+    color: @pt-intent-success;
+  }
+
+  &.plan-incomplete {
+    color: @pt-intent-warning;
+  }
+
+  .ActivePlanIndicator__text {
+    display: none;
+    @media @tablet-large {
+      display: inline-block;
+    }
+  }
+
+  .ActivePlanIndicator__icon {
+    @media @tablet-large {
+      margin-right: 7px;
+    }
+    // display: inline-block;
+    // @media @tablet-large {
+    //   display: none;
+    // }
+  }
+}

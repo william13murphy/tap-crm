@@ -1,0 +1,57 @@
+@import '../../../styles/_base.less';
+
+.InputBlock {
+  width: 100%;
+  display: block;
+
+  @media @tablet-small {
+    display: flex;
+  }
+
+  > * {
+    display: block;
+    width: 100%;
+
+    @media @tablet-small {
+      display: inline-block;
+    }
+  }
+
+  &.col1 {
+    // input {
+    //   width: 100%;
+    // }
+  }
+
+  &.col2 {
+    > * {
+      @media @tablet-small {
+        width: 49%;
+
+        &:first-child {
+          margin-right: 1%;
+        }
+
+        &:last-child {
+          margin-left: 1%;
+        }
+      }
+    }
+  }
+
+  &.col3 {
+    > * {
+      @media @tablet-small {
+        width: 49%;
+
+        &:first-child {
+          margin-right: 2%;
+        }
+
+        &:last-child {
+          margin-left: 2%;
+        }
+      }
+    }
+  }
+}

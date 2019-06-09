@@ -1,0 +1,33 @@
+@import '../../styles/_base.less';
+
+.Search {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.Search__input {
+  height: 30px;
+  width: 180px;
+  padding: 10px 25px 10px 10px;
+  transition: width 0.25s ease-in-out;
+
+  &:focus {
+    width: 240px;
+  }
+}
+
+.Search__icon {
+  color: black;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  cursor: pointer;
+}
+
+.Search__advanced-search {
+  font-size: @font-size-x-small;
+  position: absolute;
+  top: 35px;
+  right: 5px;
+}

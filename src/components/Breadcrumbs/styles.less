@@ -1,0 +1,49 @@
+@import '../../styles/_base.less';
+@import '../../styles/_mixins.less';
+
+.Breadcrumbs.pt-breadcrumbs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap; // prevent line break when not enough size for full breadcrumbs
+  // min-height: 40px; // for button hover
+  // margin-top: 2px; // for button hover
+  // margin-bottom: 2px; // for button hover
+
+  a {
+    // color: @black;
+    // color: @cyan-dark-hover;
+    color: @dark-gray1;
+    padding: 0 10px;
+    border-radius: 3px;
+    height: 40px !important; // for button hover
+    line-height: 40px !important; // for button hover
+    min-height: 40px !important; // for button hover
+
+    &:active {
+      box-shadow: 0 0 1px @gray5 !important;
+    }
+  }
+
+  a:hover {
+    .button();
+
+    padding: 0 10px !important;
+    font-size: 16px !important;
+    // background-color: @cyan-dark-hover;
+    // color: @white;
+    background-color: @light-gray5;
+    // background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.6) 56%,rgba(57,180,209,0.1) 100%);
+    font-weight: @font-weight-normal;
+  }
+
+  > li {
+    &:first-child {
+      flex-shrink: 0; // Related to: prevent line break when not enough size for full breadcrumbs
+    }
+
+    &::after {
+      padding: 0 5px 0 0;
+    }
+  }
+}

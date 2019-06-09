@@ -1,0 +1,81 @@
+@import '../../styles/_base.less';
+
+.SideNav {
+  width: @sidenav-width;
+  left: 0;
+  bottom: 0;
+  border-right: @navy-dark;
+  transition: transform @transition-sidenav-open;
+  z-index: 1;
+
+  // New styles:
+  position: fixed;
+  top: @nav-height + @subnav-height + 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  // &.hidden {
+  //   transform: translateX(-100%);
+  //
+  //   .Nav__toggle {
+  //     transform: translateX(0);
+  //   }
+  // }
+
+  &.hidden-filters {
+    transform: translateX(-@sidenav-width);
+  }
+}
+
+.SideNav__toggle {
+  position: absolute;
+  top: 0;
+  right: -60px;
+  height: 30px;
+  width: 30px;
+  background-size: contain;
+  background-color: @navy;
+  transition: transform @transition-sidenav-open;
+  transform: translateX(-100%);
+  padding: 5px;
+  cursor: pointer;
+
+  &:hover {
+    > svg,
+    > i {
+      opacity: 0.75;
+    }
+  }
+}
+
+// .SideNav__profile {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   padding: 20px;
+//
+//   img {
+//     width: 150px;
+//     height: 150px;
+//     overflow: hidden;
+//     border-radius: 500px;
+//     border: 1px solid @navy-dark;
+//     transition: transform 1s ease-in-out;
+//
+//     &:hover {
+//       transform: scaleX(-1); //rotate(360deg);
+//     }
+//   }
+//
+//   .Nav__profile__description {
+//     color: @blue-steel;
+//   }
+// }
+//
+// .SideNav__footer {
+//   position: absolute;
+//   bottom: 10px;
+//   left: 10px;
+//   color: @blue-steel;
+// }

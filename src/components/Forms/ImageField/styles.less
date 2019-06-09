@@ -1,0 +1,34 @@
+@import '../../../styles/_forms_base.less';
+
+.ImageField {
+  .pt-input-group {
+    .input-height-mixin();
+  }
+
+  .ImageField__input {
+    margin-top: 5px;
+    outline: none;
+  }
+
+  .ImageField__input-mask {
+    margin-top: 5px;
+    .input-height-mixin();
+    .input-line-height-mixin();
+
+    // button styles
+    &::after {
+      height: @input-height-default - 6;
+      line-height: @input-height-default - 6;
+
+      @media @tablet-small {
+        height: @input-height-tablet-small - 6;
+        line-height: @input-height-tablet-small - 6;
+      }
+
+      @media @desktop-large {
+        height: @input-height-desktop-large - 6;
+        line-height: @input-height-desktop-large - 6;
+      }
+    }
+  }
+}

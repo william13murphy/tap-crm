@@ -1,0 +1,79 @@
+@import '../../styles/_base.less';
+
+@todoCardTitlePadding: 20px;
+
+.todo-status(@color1, @color2) {
+  // border: 2px solid @color1;
+
+  .TodoCard__header {
+    // border-bottom: 2px solid @color1;
+    // border-bottom: 1px solid @gray3;
+    // border-top: 1px solid @color1;
+    // border-left: 1px solid @color1;
+    // border-right: 1px solid @color1;
+    background-color: @color2;
+
+    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1);
+
+    .TodoCard__status-icon {
+      color: @color1;
+    }
+
+    .TodoCard__title {
+      padding: 0 @todoCardTitlePadding 0 0;
+      color: @color1;
+    }
+  }
+}
+
+.TodoCard {
+  // margin: 10px 0;
+  position: relative;
+
+  &.status--success {
+    .todo-status(@green3, @green10);
+  }
+
+  &.status--warning {
+    .todo-status(@orange, @orange10);
+  }
+
+  &.status--danger {
+    .todo-status(@blood, @blood-light);
+  }
+
+  .TodoCard__header {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    background-color: @cyan-dark;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    .TodoCard__status-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+      font-size: 25px;
+      color: @white;
+    }
+
+    .TodoCard__title {
+      display: inline-block;
+      color: @white;
+      padding: 0 @todoCardTitlePadding;
+      // padding-bottom: @todoCardTitlePadding;
+    }
+  }
+
+  .TodoCard__body {
+    padding: @todoCardTitlePadding;
+    // border-left: 2px solid @gray3;
+    // border-right: 2px solid @gray3;
+    // border-bottom: 2px solid @gray3;
+  }
+}

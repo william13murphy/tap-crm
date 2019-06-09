@@ -1,0 +1,25 @@
+@import '../../../../../../styles/_base.less';
+@import '../../../../../../styles/_mixins.less';
+
+.ProfileTabs {
+  .ViewAllLink {
+    display: inline-block;
+    margin-top: 20px;
+    float: right;
+  }
+
+  .TabRoutes {
+    overflow-y: auto; // allow TabRoutes to scroll vertically
+
+    // @media @tablet-small {
+    //   height: 445px; // Hardcoded height to match profile card on the left...
+    // }
+    @media @desktop-small {
+      height: 320px; // TODO: Magic Number Hardcoded height to match profile card on the left...
+    }
+
+    .ContactsSummary h3 {
+      font-weight: @font-weight-semibold;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+
+
+@keyframes blinkingText {
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+
+@keyframes fadeOutText {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.recording {
+    position: fixed; 
+    bottom: 20px; 
+    right: 40px; 
+    background-color: yellow;
+}
+
+.blinking {
+    animation:blinkingText 1s linear infinite;
+}
+
+.fadeOut {
+    animation:fadeOutText 5s normal forwards ease-in-out;
+}
+
+.SchoolApp {
+    .recording {
+        position: fixed; 
+        bottom: 20px; 
+        right: 40px; 
+        background-color: yellow;
+    }
+
+    .blinking {
+        animation:blinkingText 1s linear infinite;
+    }
+}
+

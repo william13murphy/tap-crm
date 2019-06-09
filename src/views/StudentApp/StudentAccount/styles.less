@@ -1,0 +1,42 @@
+@import '../../../styles/_mixins.less';
+@import '../../../styles/_base.less';
+
+.StudentAccountModule {
+  .TabList {
+    justify-content: flex-end;
+  }
+
+  .PageNav {
+    .TabListContainer {
+      border-bottom: 1px solid @gray5;
+
+      .TabList.pt-tab-list {
+        margin-top: 0;
+        padding-top: 12px;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .Page.StudentAccountPage {
+    table {
+      .default-table-plain();
+    }
+
+    .NavigateTo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      button {
+        margin-left: 20px;
+      }
+    }
+
+    .ReactTable .rt-td {
+      @media @tablet-small {
+        margin-left: 20px;
+      }
+    }
+  }
+}

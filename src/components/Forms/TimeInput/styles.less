@@ -1,0 +1,85 @@
+@import '../../../styles/_base.less';
+@import '../../../styles/_mixins.less';
+@import '../../../styles/_forms_base.less';
+
+.rc-time-picker-panel-select {
+  overflow-x: hidden;
+  font-size: @font-size-default;
+
+  li {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+// Mimic existing app input styles
+.rc-time-picker-input,
+.rc-time-picker-panel-input {
+  .input-height-mixin();
+  .input-line-height-mixin();
+  .input-font-size-mixin();
+
+  border-radius: 0;
+  // max-width: 170px; // Prevent overlap from absolutely-positioned time picker
+}
+
+.rc-time-picker-panel-input-wrap {
+  &::before {
+    position: absolute;
+    font-family: 'Icons16', sans-serif;
+    content: '\23F2';
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    .pt-icon-styles();
+    .pt-icon-margins();
+  }
+}
+
+// Hide clear button
+.rc-time-picker-panel-clear-btn {
+  display: none;
+}
+
+// Attempt to match datepicker width
+.datepicker-width-clone() {
+  width: 176px; // Match datepicker width
+
+  @media @desktop-medium {
+    width: 179px; // Match datepicker width
+  }
+
+  @media @desktop-large {
+    width: 207px; // Match datepicker width
+  }
+}
+
+// Fix padding for absolutely-positioned time picker
+.rc-time-picker-panel-input-wrap {
+  padding: 0;
+
+  input.rc-time-picker-panel-input {
+    .datepicker-width-clone();
+  }
+}
+
+.rc-time-picker-panel-inner {
+  border: 2px solid @cyan;
+  border-radius: 0;
+}
+
+.TimeInput {
+  .TimeInput__TimePicker.rc-time-picker {
+    input.rc-time-picker-input {
+      .datepicker-width-clone();
+    }
+  }
+
+  &.touched {
+    &.error {
+      input {
+        border-color: transparent;
+        .input-error-style();
+      }
+    }
+  }
+}

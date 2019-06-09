@@ -1,0 +1,35 @@
+@import '../../../styles/_base.less';
+
+.Nav__navlink__item__title {
+  margin-top: -4px;
+}
+
+.NavNavLinkSVG {
+  margin-top: 5px;
+
+  path,
+  circle,
+  line,
+  rect,
+  polygon,
+  polyline {
+    transition: 0.55s stroke ease-in-out, 0.55s fill ease-in-out;
+  }
+}
+
+.Nav > nav .Nav__navlink.active > button.Nav__navlink__item.pt-button {
+  .NavNavLinkSVG {
+    path,
+    circle,
+    line,
+    rect,
+    polygon,
+    polyline {
+      stroke: @cyan;
+    }
+
+    .cls-2 {
+      fill: @cyan;
+    }
+  }
+}

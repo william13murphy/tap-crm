@@ -1,0 +1,31 @@
+@import '../../../styles/_forms_base.less';
+
+.EmailField,
+.TextField {
+  // &.with-icon {
+  //   input {
+  //     padding-left: 30px;
+  //   }
+  // }
+
+  .FieldGroup {
+    display: flex;
+  }
+
+  .pt-input-group {
+    margin-top: 5px;
+    // flex: 1;
+
+    .pt-icon {
+      color: @light-gray1;
+    }
+
+    // Vertically align icon inside of input
+    // Grouped with EmailField styles.
+    input[type='text'],
+    input[type='password'],
+    input[type='email'] {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import '../../styles/_base.less';
+
+.ProfileCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 20px 0;
+
+  .ProfileCard__picture {
+    width: 230px;
+    height: auto;
+    border: 1px solid @light-gray3;
+
+    @media @desktop-large {
+      width: 260px;
+    }
+  }
+
+  // Edit button -- display on top of picture on hover:
+  .ProfileCard__picture__container {
+    position: relative;
+    display: inline-block;
+
+    &:hover {
+      .ProfileCard__picture__edit {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: block;
+      }
+    }
+
+    .ProfileCard__picture__edit {
+      display: none;
+    }
+  }
+
+  .ProfileCard__card {
+    max-width: 100%;
+
+    @media @desktop-small {
+      width: 50%;
+    }
+  }
+
+  .ProfileCard__header {
+    margin-bottom: 10px;
+  }
+}

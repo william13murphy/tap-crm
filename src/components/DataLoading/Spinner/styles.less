@@ -1,0 +1,42 @@
+@import '../../../styles/_base.less';
+
+.Spinner {
+  z-index: 999; // Spinner should always be on top.
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transition: 0.5s background-color ease-in-out;
+
+  // Show a light gray screen behind the spinner.
+  &.screen {
+    pointer-events: auto; // Don't allow user to click past screen
+    background-color: rgba(245, 245, 245, 0.9);
+  }
+
+  // Blueprint spinner styles:
+  .pt-spinner .pt-spinner-head {
+    stroke: @cyan;
+  }
+
+  // ImageSpinner styles:
+  .Spinner__image__container {
+    margin-top: 0;
+
+    &.message {
+      margin-top: -65px;
+    }
+  }
+
+  .Spinner__message {
+    font-size: 14px;
+    font-weight: @font-weight-semibold;
+    color: @nav-background;
+  }
+}

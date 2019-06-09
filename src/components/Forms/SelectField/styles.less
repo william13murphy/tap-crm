@@ -1,0 +1,10 @@
+@import '../../../styles/_forms_base.less';
+
+// Removed ".overflow-visible" class in the modal, as react-select has been updated to the latest version.
+// Instead, we use menuPosition prop in the SelectInput and SelectMockInput components which solves overflow issues.
+
+.SelectField {
+  .FieldGroup {
+    display: flex;
+  }
+}

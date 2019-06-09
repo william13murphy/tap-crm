@@ -1,0 +1,26 @@
+@import '../../../../../../styles/_base.less';
+@import '../../../../../../styles/_mixins.less';
+
+// Paired with InstructorCalendar
+
+.TodayCalendar {
+  
+
+  .Calendar-defaults();
+
+  .DayCalendar-defaults();
+
+  .rbc-event {
+    min-height: 5%;
+  }
+
+  .rbc-time-content {
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+  .rbc-time-header {
+    margin-right: 0 !important;
+    border-right: 0 !important;
+  }
+}

@@ -1,0 +1,14 @@
+.pt-omnibar-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed !important; // Required to vertically center omnibar
+}
+
+.Omnibar {
+  .pt-menu {
+    // Hide more than 20 results, otherwise list expands beyond screen
+    max-height: 600px; // use a multiple of 30px
+    overflow-y: hidden;
+  }
+}

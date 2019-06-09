@@ -1,0 +1,27 @@
+@import '../../../../styles/_base.less';
+
+.CheckoutPage {
+  .CheckoutContainer {
+    display: flex;
+    flex-direction: column;
+
+    @media @tablet-small {
+      flex-direction: row;
+    }
+
+    .Cart__summary {
+      flex: 1;
+      margin: 20px;
+      background-color: @white;
+      box-shadow: 0 1px 4px @gray4;
+    }
+  }
+
+  .Checkout__button {
+    width: 200px;
+
+    &.pt-intent-danger {
+      margin-left: 20px;
+    }
+  }
+}

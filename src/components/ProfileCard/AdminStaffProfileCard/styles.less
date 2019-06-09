@@ -1,0 +1,50 @@
+@import '../../../styles/_base.less';
+@import '../../../styles/_mixins.less';
+
+.StaffProfileCard {
+  .one-third-two-third {
+    table {
+      .default-table-striped();
+    }
+
+    .label {
+      font-weight: @font-weight-semibold;
+    }
+  }
+
+  .ProfileCard__picture__container {
+    position: relative;
+    display: inline-block;
+
+    &:hover {
+      .ProfileCard__picture__edit {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: block;
+      }
+    }
+
+    .ProfileCard__picture__edit {
+      display: none;
+    }
+  }
+
+  table {
+    tr {
+      border-bottom: 1px solid @light-gray1;
+
+      &:first-child {
+        border-top: 1px solid @light-gray1;
+      }
+
+      td.label {
+        min-width: 120px;
+      }
+
+      td.value {
+        width: 100%;
+      }
+    }
+  }
+}

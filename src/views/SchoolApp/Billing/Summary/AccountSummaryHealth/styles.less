@@ -1,0 +1,70 @@
+@import '../../../../../styles/_base.less';
+@import '../../../../../styles/_mixins.less';
+
+.AccountSummaryHealth {
+  display: block;
+  padding-top: 0;
+
+  @media @desktop-small {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pt-callout {
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media @desktop-small {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 0;
+      flex-grow: 1;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &.pt-intent-success {
+      border: 2px solid @pt-intent-success;
+
+      strong {
+        color: @pt-intent-success;
+      }
+    }
+
+    &.pt-intent-primary {
+      border: 2px solid @pt-intent-primary;
+
+      strong {
+        color: @pt-intent-primary;
+      }
+    }
+
+    &.pt-intent-danger {
+      border: 2px solid @pt-intent-danger;
+
+      strong {
+        color: @pt-intent-danger;
+      }
+    }
+
+    &.pt-intent-warning {
+      border: 2px solid @pt-intent-warning;
+
+      strong {
+        color: @pt-intent-warning;
+      }
+    }
+  }
+}

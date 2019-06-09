@@ -1,0 +1,71 @@
+@import '../../../../../styles/_base.less';
+@import '../../../../../styles/_mixins.less';
+
+.UserAccountCard {
+
+  .ProfileCard__name {
+    text-align: center;
+  }
+
+  .DataCard {
+    box-shadow: 2px 2px 4px #d6d6d6;
+
+    &:hover {
+        box-shadow:  8px 8px 16px #d6d6d6;
+    }
+
+  }
+
+  .main {
+    text-align: center;
+  }
+
+  .ProfileCard__picture {
+    width: 230px;
+    height: auto;
+    border: 1px solid #ededed;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .ProfileCard__title {
+    padding: 0.25em 0;
+  }
+
+  .ProfileCard__actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    align-items: flex-end;
+  }
+
+  .one-third-two-third {
+    .ProfileCard__name {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    table {
+      .default-table-striped();
+
+      margin-bottom: 20px;
+
+      &.default-table-shaded {
+        width: 100%;
+  
+        tr:first-child {
+          border-top: none;
+        }
+  
+        tr {
+          border: none;
+        }
+      }
+    }
+
+    .label {
+      font-weight: bold;
+    }
+  }
+}

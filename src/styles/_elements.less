@@ -1,0 +1,105 @@
+@import './_base.less';
+
+// Apply a natural box layout model to all elements, but allowing components to change
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// TODO: Re-evaluate this for accessibility purposes
+*:focus {
+  outline: none;
+}
+
+body {
+  background: @light-gray5;
+  font-size: @font-size-default;
+  font-family: @font-family-default;
+  overflow-y: hidden;
+
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+
+  // Fix hidden Popovers:
+  .pt-overlay-content {
+    z-index: 9999;
+  }
+
+  // ContextHelp popover message styles
+  .ContextHelp__message {
+    padding: 5px 8px;
+    border-radius: 5px;
+    max-width: 300px;
+
+    > p {
+      color: @black;
+      line-height: 1.25;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: @cyan-dark;
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: @cyan;
+
+    &.pt-button {
+      text-decoration: none;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: @font-family-heading;
+}
+
+h1 {
+  font-size: @font-size-h1;
+}
+
+h2 {
+  font-size: @font-size-h2;
+  font-weight: @font-weight-semibold;
+}
+
+h3 {
+  font-size: @font-size-h3;
+  font-weight: @font-weight-normal;
+}
+
+h4 {
+  font-size: @font-size-h4;
+}
+
+input,
+button {
+  font-family: @font-family-default;
+  font-weight: @font-weight-light;
+}
+
+strong {
+  font-weight: @font-weight-semibold;
+}
+
+em {
+  font-style: italic;
+}
+
+.pt-card {
+  border-radius: 4px;
+}

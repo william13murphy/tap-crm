@@ -1,0 +1,37 @@
+@import '../../../../styles/_base.less';
+
+.MobileNavMenuLink {
+  cursor: pointer;
+  display: flex;
+  padding: 10px 0;
+  font-size: 25px;
+  color: @dark-gray5;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  min-height: @mobile-nav-menu-link-height;
+  height: @mobile-nav-menu-link-height;
+  border-bottom: 1px solid @light-gray4;
+  transition: 0.25s background-color ease-in-out;
+
+  &.header {
+    // background: linear-gradient(to bottom, @white 0%, @light-gray3 100%);
+    background: @light-gray4;
+    font-weight: @font-weight-semibold;
+    cursor: default;
+  }
+  &:not(.header) {
+    background: @light-gray2;
+  }
+
+  // &:last-child {
+  //   border-bottom: 1px solid @light-gray5;
+  // }
+
+  &:hover {
+    color: @dark-gray5;
+    text-decoration: none;
+    // TODO: Re-implement hover, but only when touchscreen == false
+    // background: @white;
+  }
+}

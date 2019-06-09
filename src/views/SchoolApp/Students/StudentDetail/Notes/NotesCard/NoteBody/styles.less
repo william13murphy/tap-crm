@@ -1,0 +1,40 @@
+@import '../../../../../../../styles/_base.less';
+
+.NoteBody {
+  h3 {
+    padding-bottom: 5px;
+    font-weight: @font-weight-semibold;
+  }
+
+  .NoteBody__header {
+    padding-bottom: 10px;
+    font-size: @font-size-small;
+    border-bottom: 1px solid @light-gray2;
+
+    .pt-icon {
+      color: @dark-gray4;
+      &.NoteBody__efcflag {
+        color: @orange;
+        margin-right: 5px;
+      }
+      &.NoteBody__schoolflag {
+        color: @cyan-dark;
+        margin-right: 5px;
+      }
+      &.NoteBody__timeicon {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .NoteBody__detail {
+    color: @black;
+    padding: 10px 0;
+  }
+
+  .NoteBody__footer {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

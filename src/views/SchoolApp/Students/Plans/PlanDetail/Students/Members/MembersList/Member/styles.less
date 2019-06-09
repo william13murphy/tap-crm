@@ -1,0 +1,75 @@
+@import '../../../../../../../../../styles/_base.less';
+
+.Member {
+  @media @tablet-large {
+    width: 800px; // Prevents some movement while loading.
+  }
+
+  > .DataCard__header {
+    background-color: @cyan-dark;
+
+    .DataCard__title {
+      // font-weight: bold;
+      color: @white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    // Show a smaller button in the toolbar since it has a color background
+    .DataCard__toolbar {
+      top: 5px;
+      right: 5px;
+
+      .pt-button {
+        min-height: 30px;
+        line-height: 30px;
+        box-shadow: none;
+      }
+    }
+  }
+
+  > .DataCard__body {
+    background-color: @light-bluegray5;
+  }
+
+  .MemberProgram__DataCard {
+    > .DataCard__header {
+      .DataCard__title {
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: @black;
+        }
+      }
+    }
+  }
+
+  .StyleRateClassesDisplayDataCard {
+    position: relative;
+    > .DataCard__header {
+      background-color: @cyan-dark-hover;
+
+      > div > .DataCard__title {
+        color: @white;
+      }
+    }
+  }
+
+  .StyleRateDisplay__Detail {
+    min-width: 250px;
+    > .DataCard__header {
+      background-color: @cyan-dark-hover;
+
+      > div > .DataCard__title {
+        color: @white;
+      }
+    }
+
+    > .DataCard__body {
+      min-width: 250px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../../../../styles/_base.less';
+@import '../../../../../styles/_mixins.less';
+
+.CalendarPage {
+  .Calendar {
+    margin-bottom: 40px;
+    .Calendar-defaults();
+
+    // .DayCalendar-defaults();
+
+    // .WeekCalendar-defaults();
+    .rbc-toolbar {
+      height: 50px;
+      padding: 0 5px;
+    }
+
+    .Toolbar__arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 20px;
+    }
+
+    > h4 {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

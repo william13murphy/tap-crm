@@ -1,0 +1,57 @@
+@import '../../../../../../styles/_base.less';
+
+.PlanDetailFinalizePage {
+  .PaymentAuthorizationModal {
+    @media (min-width: @dimension-desktop-small) {
+      .Modal__window {
+        // Specified width for Payment Authorization Template, returned from API:
+        min-width: 860px;
+        max-width: 860px;
+      }
+    }
+  }
+
+  .PageBody {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .Finalized {
+    color: @pt-intent-success;
+  }
+
+  .PrintPlanSummaryButton {
+    min-width: 50px;
+  }
+
+  .Summary__actions {
+    display: flex;
+    margin: 10px 0;
+    justify-content: flex-start;
+
+    .Summary__action__item {
+      margin-right: 5px;
+    }
+  }
+
+  .PaymentAuthorizationSection__links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .PaymentAuthorizationSignedText {
+    padding-left: 12px;
+  }
+
+  .ReturnToDashBoardText {
+    padding-left: 12px;
+  }
+
+  .PaymentsDataGrid {
+    .Action__cell {
+      .pt-button {
+        margin-right: 10px;
+      }
+    }
+  }
+}

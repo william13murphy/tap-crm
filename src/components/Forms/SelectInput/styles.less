@@ -1,0 +1,76 @@
+@import '../../../styles/_forms_base.less';
+
+.Select__container {
+  margin: 5px 0;
+
+  .SelectInput__control + div {
+    z-index: 2;
+  }
+
+  .SelectInput {
+    border-radius: 0px;
+    box-shadow: none;
+    border-color: none;
+
+    .SelectInput__menu {
+      margin-top: 0px;
+      border-bottom: 2px solid @cyan;
+      border-left: 2px solid @cyan;
+      border-right: 2px solid @cyan;
+    }
+
+    .SelectInput__control--is-focused:not(.--menu-is-open) {
+      border-color: transparent;
+      box-shadow: inset 0 0 0 2px @cyan;
+    }
+
+    .SelectInput__control--is-focused:not(.--menu-is-open)&.error {
+      border-color: transparent;
+      box-shadow: inset 0 0 0 2px @blood;
+    }
+
+    &.touched {
+      &.error {
+        .SelectInput__control {
+          border-color: transparent;
+          .input-error-style();
+        }
+      }
+    }
+
+    .SelectInput__control {
+      background-color: none;
+      border-radius: 0;
+      outline: none;
+      height: @input-height-default;
+
+      @media @tablet-small {
+        font-size: @input-font-size-tablet-small;
+        height: @input-height-tablet-small;
+      }
+
+      @media @desktop-large {
+        font-size: @input-font-size-desktop-large;
+        height: @input-height-desktop-large;
+      }
+
+      &.pt-intent-danger {
+        background-color: @red10;
+      }
+    }
+
+    &.is-disabled {
+      .SelectInput__control {
+        font-weight: @font-weight-light;
+        background-color: @light-gray4;
+        border: none;
+      }
+    }
+
+    &.no-clear {
+      .SelectInput__clear_zone {
+        display: none;
+      }
+    }
+  }
+}

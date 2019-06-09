@@ -1,0 +1,81 @@
+const tempAttendanceData = [
+  {
+    Date: 'Thursday, January 11, 2018',
+    Program: 'Karate',
+    Class: 'Intermediate Karate',
+    Time: '7:00 PM',
+    Rank: 'Orange',
+  },
+  {
+    Date: 'Tuesday, January 9, 2018',
+    Program: 'Karate',
+    Class: 'Intermediate Karate',
+    Time: '7:00 PM',
+    Rank: 'Orange',
+  },
+  {
+    Date: 'Monday, January 8, 2018',
+    Program: 'Karate',
+    Class: 'Beginner Karate',
+    Time: '6:00 PM',
+    Rank: 'Yellow',
+  },
+  {
+    Date: 'Friday, January 5, 2018',
+    Program: 'Karate',
+    Class: 'Beginner Karate',
+    Time: '6:00 PM',
+    Rank: 'Yellow',
+  },
+  {
+    Date: 'Wednesday, January 3, 2018',
+    Program: 'Karate',
+    Class: 'Beginner Karate',
+    Time: '6:00 PM',
+    Rank: 'Yellow',
+  },
+  {
+    Date: 'Friday, December 15, 2017',
+    Program: 'Karate',
+    Class: 'Beginner Karate',
+    Time: '6:00 PM',
+    Rank: 'Yellow',
+  },
+  {
+    Date: 'Tuesday, December 12, 2017',
+    Program: 'Karate',
+    Class: 'Beginner Karate',
+    Time: '6:00 PM',
+    Rank: 'Yellow',
+  },
+  {
+    Date: 'Monday, December 11, 2017',
+    Program: 'Karate',
+    Class: 'Beginner Karate',
+    Time: '6:00 PM',
+    Rank: 'Yellow',
+  },
+  {
+    Date: 'Thursday, December 7, 2017',
+    Program: 'Karate',
+    Class: 'Beginner Karate',
+    Time: '6:00 PM',
+    Rank: 'White',
+  },
+  {
+    Date: 'Wednesday, December 6, 2017',
+    Program: 'Karate',
+    Class: 'Beginner Karate',
+    Time: '6:00 PM',
+    Rank: 'White',
+  },
+  {
+    Date: 'Monday, December 4, 2017',
+    Program: 'Karate',
+    Class: 'Beginner Karate',
+    Time: '6:00 PM',
+    Rank: 'White',
+  },
+];
+
+export default tempAttendanceData;

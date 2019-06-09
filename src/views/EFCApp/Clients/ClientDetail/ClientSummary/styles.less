@@ -1,0 +1,91 @@
+@import '../../../../../styles/_base.less';
+
+.ClientProfileInfoWrapper {
+  padding: 10px 0;
+
+  @media @desktop-small {
+    padding: 10px 10px 10px 0;
+  }
+
+  .DataCard.pt-card {
+    margin: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+.SummaryCard.NotesSummary {
+  padding: 10px 0;
+
+  @media @desktop-small {
+    padding: 10px 0 10px 10px;
+  }
+}
+
+.SummaryCard {
+  position: relative;
+  // min-height: 80px; // allow room for spinner
+  padding: 10px 0;
+
+  @media @desktop-small {
+    padding: 10px;
+  }
+
+  .SummaryCard__toolbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .SummaryCard__title {
+    margin-bottom: 5px;
+  }
+}
+
+.ClientProfileInfoWrapper {
+  .DataCard {
+    .DataCard__title {
+      padding-bottom: 15px;
+    }
+
+    &:hover {
+      background-color: @white;
+    }
+  }
+
+  > .pt-card,
+  > .AddressesSummary {
+    margin-top: 10px;
+
+    // @media @desktop-medium {
+    //   margin-right: 5px;
+    // }
+  }
+}
+
+.ClientQuickFacts {
+  .two-column > div > .pt-card {
+    margin: 10px 0;
+
+    @media @desktop-medium {
+      margin: 10px 5px;
+    }
+  }
+}
+
+.ClientQuickFacts {
+  // .preferred-client-contact {
+  //   margin-top: 10px;
+  // }
+
+  .ContactCard {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .NoteCard {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}

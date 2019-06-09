@@ -1,0 +1,17 @@
+@import '../../../../../styles/_base.less';
+
+.ClientNotesPage {
+  // Break NoteCards into two columns
+  .NoteCards {
+    @media @desktop-medium {
+      .NoteCard__wrapper {
+        width: 49%;
+        display: inline-block;
+
+        &:nth-child(even) {
+          margin-left: 2%;
+        }
+      }
+    }
+  }
+}

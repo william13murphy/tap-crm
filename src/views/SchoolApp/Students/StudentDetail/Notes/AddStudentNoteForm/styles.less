@@ -1,0 +1,17 @@
+@import '../../../../../../styles/_base.less';
+
+.AddStudentNoteForm {
+  // Enabled Switch:
+  .SwitchField
+    input:checked
+    ~ .pt-control-indicator.pt-control-indicator.pt-control-indicator {
+    background-color: @orange;
+  }
+
+  // Active state
+  .SwitchField
+    input:not(:disabled):active:checked
+    ~ .pt-control-indicator.pt-control-indicator.pt-control-indicator {
+    background-color: @orange-active;
+  }
+}

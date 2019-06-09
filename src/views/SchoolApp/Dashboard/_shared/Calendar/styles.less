@@ -1,0 +1,94 @@
+@import '../../../../../styles/_base.less';
+@import '../../../../../styles/_mixins.less';
+
+// Paired with InstructorCalendar
+
+// @sidenav-width: 200px;
+
+.DashboardCalendarPage {
+  .PageHeader {
+    margin-left: @sidenav-width;
+    width: auto;
+
+    .PageTitle {
+      display: none;
+
+      @media @desktop-medium {
+        display: block;
+      }
+    }
+  }
+
+  .CalendarOverviewPage {
+    .Calendar-defaults();
+
+    .DayCalendar-defaults();
+
+    .WeekCalendar-defaults();
+
+    .rbc-event {
+      min-height: 5%;
+    }
+
+    .rbc-toolbar {
+      height: 38px;
+      padding: 0 5px;
+    }
+
+    .rbc-calendar {
+      margin-left: @sidenav-width;
+    }
+  }
+
+  .Calendar__filters {
+    padding: 20px;
+  }
+
+  .Calendar__FiltersForm {
+    h3 {
+      padding: 10px;
+      .h3-block();
+    }
+
+    .Calendar__FiltersForm__title {
+      margin-bottom: 10px;
+    }
+  }
+
+  .Calendar__actions {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      margin-right: 10px;
+      margin-bottom: 10px;
+
+      &::before {
+        display: none;
+      }
+
+      @media @desktop-small {
+        margin-bottom: 0;
+
+        &::before {
+          display: inline;
+        }
+      }
+    }
+
+    .Calendar__actions__column1,
+    .Calendar__actions__column2 {
+      display: flex;
+      flex-direction: column;
+
+      @media @tablet-large {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .Calendar__grid {
+    margin-left: @sidenav-width;
+    overflow-y: hidden;
+  }
+}

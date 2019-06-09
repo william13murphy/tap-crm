@@ -1,0 +1,50 @@
+@import '../../../../../styles/_base.less';
+
+.PaymentsModule {
+  .TabList {
+    justify-content: flex-end;
+  }
+
+  .TabRoutes.pt-card {
+    padding: 0;
+  }
+
+  .PageNav {
+    .TabListContainer {
+      border-bottom: 1px solid @gray5;
+
+      .TabList.pt-tab-list {
+        margin-top: 0;
+        padding-top: 12px;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .OrderDetailsFooter {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+
+    .FooterRow {
+      flex:1;
+      flex-direction: row;
+      display: flex;
+      padding: 5px 10px;
+
+      .FooterTitle, .FooterValue {
+        display: flex;
+        justify-content: flex-end;
+        font-weight: bold;
+      }
+
+      .FooterTitle {
+        flex: 1;
+      }
+
+      .FooterValue {
+        width: 150px;
+      }
+    }
+  }
+}

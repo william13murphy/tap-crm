@@ -1,0 +1,176 @@
+@import '../../../styles/_base.less';
+
+.Module.LoginModule {
+  .LoginPage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(242,245,245,0.8);
+
+
+    .RequestPasswordReset__description {
+      margin-bottom: 10px;
+    }
+
+    // Trouble Loggin In modal
+    .Modal__window {
+      max-width: 300px;
+
+      button {
+        width: 100%;
+      }
+    }
+
+    .LoginPage__footer {
+      display: flex;
+      justify-content: flex-start;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 5px 10px;
+      box-shadow: 2px 0 2px @gray5;
+
+      .ResetPassword {
+        margin-right: 10px;
+
+        .pt-icon {
+          margin-right: 5px;
+          color: @cyan-dark;
+        }
+      }
+
+      .KioskLogin {
+        .pt-icon {
+          margin-left: 5px;
+          color: @cyan-dark;
+        }
+      }
+    }
+
+    .LoginPage__head {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: @white;
+      padding: 15px 0 5px;
+      position: relative;
+      // border-bottom: 1px solid @light-gray3;
+
+      > img {
+        margin-bottom: 10px;
+        height: 120px;
+      }
+
+      > .beta {
+        position: absolute;
+        background: green;
+        border-radius: 4px;
+        padding: 2px;
+        color: white;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .LoginPage__title {
+      margin-bottom: 10px;
+      color: @cyan-softened;
+      text-align: center;
+    }
+
+    .LoginFormContainer {
+      z-index: 99;
+      padding: 30px 20px;
+      box-shadow: 2px 2px 4px @gray5;
+      background-color: @white;
+      border-radius: 4px;
+      transition: .3s ease-in-out;
+
+      &:hover {
+        box-shadow: 8px 8px 16px @gray5;
+        transition: .3s ease-in-out;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        
+        -webkit-transform: scale(1.0004);
+        transform: scale(1.0004);
+        -webkit-font-smoothing: subpixel-antialiased;
+        display: inline-table;
+
+      }
+
+
+      .FormContainer {
+        padding: 20px;
+        background-color: @white;
+  
+        input {
+          text-align: center;
+          padding-left: 30px;
+          padding-right: 30px;
+          width: 240px;
+          border-radius: 3px;
+  
+          &.pt-input:focus,
+          &.pt-input.active {
+            box-shadow: inset 0 0 0 2px @orange;
+          }
+        }
+      }
+    }
+
+    .QuickLogin {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 20px;
+      background: @white;
+      box-shadow: 8px 8px 12px @gray5;
+      z-index: 95;
+
+      .QuickLogin__title {
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      .QuickLogin__label {
+        margin: 5px 0;
+        color: @dark-gray5;
+        font-weight: @font-weight-bold;
+      }
+
+      .QuickLogin__button {
+        width: 300px;
+        margin-bottom: 5px;
+        display: block;
+      }
+    }
+
+    .Login__title {
+      color: @dark-gray3;
+    }
+
+    .Login__block {
+      padding: 5px 0;
+
+      .pt-icon {
+        color: @light-gray1;
+      }
+
+      a.pt-button:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

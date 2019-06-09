@@ -1,0 +1,30 @@
+@import '../../../../styles/_base.less';
+
+.SchoolContextSelect {
+  // color: #fff;
+  width: 100%;
+  margin-bottom: 5px; // "vertical center"
+  margin-left: 5px;
+
+  @media @tablet-small {
+    margin-right: 20px;
+    max-width: 420px;
+  }
+
+  &.SchoolContextSelect--read-only {
+    color: @white;
+    margin-bottom: 0;
+    font-size: @font-size-h2;
+    padding-left: 20px;
+  }
+
+  .SchoolContextSelect__input {
+    // .Select-control {
+    //   background: #000;
+    // }
+    //
+    // .Select-value-label {
+    //   color: #eee;
+    // }
+  }
+}

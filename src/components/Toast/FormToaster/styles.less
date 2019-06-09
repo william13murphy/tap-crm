@@ -1,0 +1,28 @@
+@import '../../../styles/_colors.less';
+
+.FormToaster {
+  .pt-toast {
+    &.success {
+      background-color: @green10;
+      border: 1px solid @green3;
+
+      .pt-icon {
+        color: @green3;
+      }
+    }
+
+    &.error,
+    &.fail {
+      background-color: @blood-light;
+      border: 1px solid @blood;
+
+      .pt-icon {
+        color: @blood;
+      }
+    }
+    // Vertical alignment fix:
+    .pt-toast-message {
+      padding: 12px;
+    }
+  }
+}

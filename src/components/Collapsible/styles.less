@@ -1,0 +1,52 @@
+@import '../../styles/_colors.less';
+@import '../../styles/_mixins.less';
+
+.Collapsible {
+  cursor: pointer;
+
+  &.isOpen {
+    position: relative;
+    z-index: 1;
+    h3::before {
+      content: '\E733'; // Arrow down icon
+    }
+  }
+
+  &.isClosed {
+    h3::before {
+      transform: rotate(-90deg);
+      content: '\E733'; // Arrow down icon
+    }
+  }
+
+  .Title__icon {
+    margin-left: 10px;
+    border: 1px solid black;
+  }
+
+  > h3 {
+    .Title__display {
+      margin-left: 25px;
+    }
+
+    .h3-block();
+    padding: 10px 10px 10px 34px;
+    user-select: none;
+
+    &:hover {
+      background-color: @cyan-dark-hover;
+    }
+
+    &::before {
+      display: inline-block;
+      transition: transform 0.2s ease-in-out;
+      font-family: 'Icons16', sans-serif;
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-size: 14px;
+      color: @light-gray6;
+      pointer-events: none;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import '../../../../../styles/_base.less';
+@import '../../../../../styles/_colors.less';
+
+.StudentContainer {
+  width: 100%;
+  background-color: @light-gray5;
+
+  @media @tablet-small {
+    width: 50%;
+  }
+
+  .StudentList {
+    overflow: auto;
+    height: auto;
+    max-height: 400px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: @light-gray5;
+    box-shadow: 0 1px 4px @gray4;
+  }
+
+  .StudentList__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: @white;
+    background-color: @cyan;
+    font-size: 18px;
+    height: 40px;
+    width: 100%;
+  }
+
+  .StudentList__searchIcon {
+    padding: 0 5px;
+  }
+
+  ::placeholder {
+    color: @light-gray1;
+  }
+
+  .StudentList__container {
+    font-size: 15px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .StudentList__item {
+    margin: 5px;
+    font-size: @font-size-default;
+  }
+}

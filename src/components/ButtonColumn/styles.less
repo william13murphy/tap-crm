@@ -1,0 +1,44 @@
+@import '../../styles/_base.less';
+
+.ButtonColumn {
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
+
+  @media @desktop-small {
+    margin: 0 25%;
+  }
+
+  button,
+  .button,
+  button.pt-button.pt-button,
+  a.pt-button.pt-button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0;
+    height: 60px;
+    // min-width: 360px;
+    // max-width: 90%;
+    padding-right: 60px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: @font-weight-normal;
+
+    // @media @dimension-desktop-small {
+    //   margin-left: 25%;
+    //   margin-right: 25%;
+    //   align-self: stretch;
+    //   flex-grow: 1;
+    //   width: 50%;
+    // }
+
+    .pt-icon {
+      font-size: 20px;
+      padding-bottom: 2px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+}

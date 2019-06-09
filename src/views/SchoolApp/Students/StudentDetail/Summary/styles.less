@@ -1,0 +1,44 @@
+@import '../../../../../styles/_base.less';
+
+.StudentSummaryPage {
+  padding: 8px 0 20px 0;
+  // Outer DataCard Style: light gray background:
+  .GradingSummary .DataCard__header,
+  .InputBlock > .ProfileCard > .DataCard > .DataCard__header {
+    // .InputBlock > .DataCard > .DataCard__header {
+    background: @cyan-dark;
+    border-bottom: 1px solid @light-gray1;
+
+    .DataCard__title {
+      font-weight: @font-weight-semibold;
+      float: left;
+    }
+  }
+
+  .DataCard__subtitle {
+    float: right;
+  }
+
+  // Inner DataCard Style: white background:
+  .GradingSummary .DataCard > .DataCard__header {
+    background: @white;
+  }
+}
+
+
+.CompactSummaryCard {
+  width: 20%;
+  min-width: 200px;
+  box-shadow: 2px 2px 4px #d6d6d6;
+  background-color: white;
+  border-radius: 4px;
+  display: block;
+  height: 340px;
+  justify-content: center;
+  padding-bottom: 20px;
+
+  &:hover {
+    box-shadow:  8px 8px 16px #d6d6d6;
+  }
+
+}

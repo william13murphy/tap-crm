@@ -1,0 +1,30 @@
+@import '../../../../../styles/_base.less';
+
+.EFCNav .UserMenu.pt-menu {
+  top: @efc-nav-height;
+}
+
+.UserMenu.pt-menu {
+  position: fixed;
+  top: @nav-height;
+  right: 0;
+  z-index: 11;
+  border: 1px solid @light-gray3;
+  // background-color: @light-gray5;
+  // box-shadow: 0px 0px 9px 3px @light-gray1;
+  box-shadow: 0 2px 4px 0 @light-gray1;
+  border-radius: 0;
+
+  .pt-menu-item {
+    color: @gray1;
+
+    &::before {
+      color: @cyan-dark;
+    }
+  }
+}
+
+.UserMenu h6.UserMenu__user {
+  line-height: 19px;
+  color: @dark-gray5;
+}

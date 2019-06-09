@@ -1,0 +1,35 @@
+@import '../../../styles/_base.less';
+
+.Page {
+  // Styles for TabList inside of Page:
+  .TabListContainer .TabList .NavLink {
+    margin-left: -1px; // align tab with left side of DataCard
+
+    &.selected {
+      background-color: @white;
+      z-index: 1; // show tab in front of DataCard border-top
+    }
+
+    &:hover {
+      background-color: @white;
+    }
+  }
+
+  ::-webkit-scrollbar {
+      width: 0.5px;
+      position: absolute;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    // border: 4px solid transparent;
+    background: #dadce0;
+    border-radius: 8px;
+
+}
+
+
+}

@@ -1,0 +1,75 @@
+// Base stylesheet to include in all components.
+// Contains variables & mixins only.
+
+/*
+ * NOTE: All of these variables are imported into javascript.
+ * If you change ANY VARIABLE NAMES, you must propagate those changes into the js.
+ * Variable Names are converted from camelCase in .less to snake_case in .js
+ */
+
+//Put any global app styles in App.less
+
+// @import '../../../node_modules/@blueprintjs/core/dist/variables.less';
+@import '../vendor/@blueprintjs/variables.less';
+@import './_colors.less';
+
+// Locale variables. Usage:
+// .@{locale-australia} -> outputs: .locale__Australia
+
+@locale-australia: locale__Australia;
+@locale-united-states: locale__UnitedStates;
+@locale-united-kingdom: locale__UnitedKingdom;
+@locale-canada: locale__Canada;
+@locale-new-zealand: locale__NewZealand;
+@locale-ireland: locale__Ireland;
+
+@font-family-default: 'proxima-nova', Arial, Open Sans;
+@font-family-heading: 'proxima-nova', Arial, Open Sans;
+
+@font-size-h1: 24px;
+@font-size-h2: 20px;
+@font-size-h3: 18px;
+@font-size-h4: 18px;
+@font-size-default: 15px;
+@font-size-small: 14px;
+@font-size-x-small: 12px;
+
+@font-weight-thin: 100;
+@font-weight-light: 300;
+@font-weight-regular: 400; // normal
+@font-weight-normal: 400; // normal
+@font-weight-medium: 500;
+@font-weight-semibold: 600; // bold, in most cases
+@font-weight-bold: 700;
+
+@sidenav-width: 320px;
+@nav-height: 60px;
+@efc-nav-height: 40px;
+@mobile-nav-height: 60px;
+@subnav-height: 50px;
+@subnav-height-mobile: 80px;
+@mobile-nav-menu-link-height: 70px;
+
+// Breakpoints
+// @dimension-phone: 500px;
+@dimension-tablet-small: 768px;
+@dimension-tablet-large: 910px;
+@dimension-desktop-small: 1025px;
+@dimension-desktop-medium: 1201px;
+@dimension-desktop-large: 1601px;
+@dimension-desktop-x-large: 1921px;
+
+// @phone: ~"(min-width: @{dimension-phone})";
+@tablet-small: ~'(min-width: @{dimension-tablet-small}) ';
+@tablet-large: ~'(min-width: @{dimension-tablet-large}) ';
+@desktop-small: ~'(min-width: @{dimension-desktop-small}) ';
+@desktop-medium: ~'(min-width: @{dimension-desktop-medium}) ';
+@desktop-large: ~'(min-width: @{dimension-desktop-large}) ';
+@desktop-x-large: ~'(min-width: @{dimension-desktop-x-large}) ';
+
+@transition-sidenav-open: 0.25s ease-in-out;
+
+@modal-min-height: 180px;
+
+@page-padding-horizontal: 20px;
+@page-padding-vertical: 20px;

@@ -1,0 +1,64 @@
+@import '../../../../../../styles/_base.less';
+
+.NotesCard {
+  // Limit width and horizontally center cards:
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .DataCard__header {
+    background-color: @cyan-dark;
+    > div > .DataCard__title {
+      color: @white;
+    }
+  }
+
+  .DataCard .DataCard__body {
+    padding-top: 10px;
+  }
+
+  .Action__cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  > h4 {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pt-control {
+    float: right !important;
+  }
+
+  .SwitchField {
+    margin-top: 0;
+
+    // Right-align switch:
+    .SwitchField__label {
+      margin-right: 32px;
+      font-size: @font-size-small;
+    }
+
+    .pt-control-indicator {
+      right: 0 !important;
+      left: auto !important;
+    }
+  }
+
+  // Override switch color for EFCFlag:
+  .EFCFlagSwitch.SwitchField
+    input:checked
+    ~ .pt-control-indicator.pt-control-indicator.pt-control-indicator {
+    background-color: @orange;
+  }
+
+  .EFCFlagSwitch.SwitchField
+    input:not(:disabled):active:checked
+    ~ .pt-control-indicator.pt-control-indicator.pt-control-indicator {
+    background-color: @orange-active;
+  }
+}

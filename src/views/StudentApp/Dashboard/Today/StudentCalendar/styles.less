@@ -1,0 +1,16 @@
+@import '../../../../../styles/_base.less';
+@import '../../../../../styles/_mixins.less';
+
+.StudentCalendar {
+  .Calendar-defaults();
+  .DayCalendar-defaults();
+  .WeekCalendar-defaults();
+
+  .rbc-month-view {
+    flex: 1 !important;
+
+    .rbc-month-row {
+      flex: 1 !important;
+    }
+  }
+}

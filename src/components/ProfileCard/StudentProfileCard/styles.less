@@ -1,0 +1,37 @@
+@import '../../../styles/_base.less';
+@import '../../../styles/_mixins.less';
+
+.StudentProfileCard {
+  margin: 0; // TODO: Remove layout / margins from .ProfileCard
+  .ProfileCard__card {
+    width: 100%; // TODO: Remove layout / width from .ProfileCard
+  }
+
+  .Profile__actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .EditLink {
+      margin-right: 5px;
+    }
+  }
+
+  table {
+    tr {
+      border-bottom: 1px solid @light-gray1;
+
+      &:first-child {
+        border-top: 1px solid @light-gray1;
+      }
+
+      td.label {
+        min-width: 120px;
+      }
+
+      td.value {
+        width: 100%;
+      }
+    }
+  }
+}

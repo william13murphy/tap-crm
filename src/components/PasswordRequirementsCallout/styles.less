@@ -1,0 +1,22 @@
+@import '../../styles/_base.less';
+
+.PasswordRequirementsCallout {
+  margin-bottom: 10px;
+  background-color: @light-gray4;
+  border-radius: 0;
+
+  &.resetPasswordForm {
+    max-width: 99%;
+  }
+
+  .PasswordRequirementsCallout__icon {
+    margin-right: 4px;
+    &::before {
+      color: @gray1;
+    }
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+}

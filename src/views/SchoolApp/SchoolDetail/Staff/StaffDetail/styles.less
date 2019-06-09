@@ -1,0 +1,26 @@
+@import '../../../../../styles/_base.less';
+
+.StaffDetailPage {
+  // Outer DataCard Style: light gray background:
+  padding: 10px;
+
+  .InstructorStyles .DataCard__header {
+    // .InputBlock > .DataCard > .DataCard__header {
+    background: @light-gray3;
+    border-bottom: 1px solid @light-gray1;
+
+    .DataCard__title {
+      font-weight: @font-weight-semibold;
+      float: left;
+    }
+  }
+
+  .DataCard__subtitle {
+    float: right;
+  }
+
+  // Inner DataCard Style: white background:
+  .InstructorStyles .DataCard > .DataCard__header {
+    background: @white;
+  }
+}

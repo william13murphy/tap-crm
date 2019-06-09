@@ -1,0 +1,35 @@
+@import '../../../../../styles/_base.less';
+
+.AppointmentForm {
+  margin-bottom: 20px;
+  .List__container {
+    display: flex;
+    flex-direction: column;
+
+    @media @tablet-small {
+      flex-direction: row;
+    }
+  }
+
+  .AddMembers__button {
+    margin-bottom: 10px;
+  }
+
+  .List__field1 {
+    flex: 1;
+    margin-bottom: 20px;
+
+    @media @tablet-small {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  .List__field2 {
+    flex: 1;
+  }
+
+  .AppointmentForm__header {
+    margin: 20px 0;
+  }
+}

@@ -1,0 +1,69 @@
+@import '../../../../styles/_colors.less';
+
+.ImportStudent__container {
+  .ImportStudent__Choosefile {
+    width: 80%; /*can be in percentage also.*/
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 20px;
+
+    .ImportStudent__title {
+      margin-bottom: 20px;
+
+      .ImportStudent__filetype {
+        font-size: 12px;
+      }
+    }
+
+    .Import__progressbar {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .ImportStatus__count {
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      height: auto;
+    }
+
+    .ImportStatus__item {
+      margin: 15px;
+
+      &.Success {
+        color: @green3;
+      }
+      &.fail {
+        color: @red3;
+      }
+    }
+
+    .DownloadFailedList {
+      margin-left: 5px;
+      color: @red3;
+      text-decoration: underline;
+    }
+
+    .Import__progress {
+      margin-top: 20px;
+      color: @green4;
+    }
+
+    .Import__failedStudents {
+      margin-top: 20px;
+      color: @red3;
+    }
+  }
+
+  > .Import__student {
+    margin-top: 30px;
+    float: right;
+
+    &.disabled {
+      font-size: 15px;
+      color: @light-gray6;
+      pointer-events: none;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import './_base.less';
+@import './_mixins.less';
+@import './_forms_base.less';
+
+// Form element styles
+.SubNav,
+.Module,
+.Page {
+  .pt-input:not(:last-child) {
+    padding-right: 10px; // override default padding-right from blueprintjs
+  }
+
+  form {
+    width: 100%; // Fill container, especially when wrapped with FormWrapper
+  }
+
+  // Fix alignment of icon with input, when surrounded by label.
+  // TODO: Add specificity jsut for this use case.
+  label.pt-label .pt-input {
+    // margin-top: 0 !important;
+  }
+
+  label.pt-label {
+    font-weight: @font-weight-semibold;
+    display: flex;
+    flex-direction: column;
+
+    @media @tablet-small {
+      font-size: @input-font-size-tablet-small;
+    }
+
+    @media @desktop-large {
+      font-size: @input-font-size-desktop-large;
+    }
+  }
+
+  // FontAwesome <Icon> inside of .pt-input-group
+  // Placement: Left
+  // .pt-input-group {
+  //   .fa {
+  //     position: absolute;
+  //     top: 50%;
+  //     margin-top: -8px;
+  //     color: @green2;
+  //     font-size: 18px;
+  //     line-height: 18px;
+  //
+  //     @media @tablet-small {
+  //       font-size: 18px;
+  //     }
+  //
+  //     @media @desktop-large {
+  //       font-size: 21px;
+  //     }
+  //
+  //     &.icon-left {
+  //       left: 9px;
+  //     }
+  //
+  //     &.icon-right {
+  //       right: 9px;
+  //     }
+  //   }
+  // }
+  // Blueprintjs icon inside of .pt-input-group or .button
+  .pt-button::before,
+  .pt-input-group .pt-icon {
+    .pt-icon-styles();
+  }
+
+  .pt-input-group .pt-icon {
+    .pt-icon-margins();
+  }
+
+  input.pt-input {
+    // Input styles: size
+    border-radius: 0;
+    .input-font-size-mixin();
+    .input-height-mixin();
+
+    margin-top: 0; // override default blueprint margin-top: 5;
+
+    // Input styles: colors
+    &:focus,
+    &.active {
+      box-shadow: inset 0 0 0 2px @cyan; // linked with ValidatedInput currency & percent styles.
+    }
+
+    &.pt-intent-success {
+      background-color: @olive-light; // @green10;
+      box-shadow: inset 0 0 0 2px @olive;
+    }
+
+    &.pt-intent-danger {
+      .input-error-style();
+    }
+  }
+
+  textarea.pt-input {
+    border-radius: 0;
+    margin-top: 0; // override default blueprint margin-top: 5;
+
+    // Input styles: colors
+    &:focus,
+    &.active {
+      box-shadow: inset 0 0 0 2px @cyan;
+    }
+
+    &.pt-intent-success {
+      background-color: @olive-light; // @green10;
+      box-shadow: inset 0 0 0 2px @olive;
+    }
+
+    &.pt-intent-danger {
+      .input-error-style();
+    }
+  }
+
+  button.pt-button,
+  a.pt-button {
+    .button();
+  }
+}

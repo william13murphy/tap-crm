@@ -1,0 +1,34 @@
+@import '../../styles/_base.less';
+@import '../../styles/_mixins.less';
+
+@dataCardPadding: 20px;
+@dataCardTitlePadding: 20px;
+
+.DataCard {
+  margin: 10px 0;
+  position: relative;
+
+  &.pt-card {
+    padding: 0; // override pt-card padding
+    border-radius: 4px;
+  }
+
+  .DataCard__toolbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .DataCard__header {
+    padding: 20px @dataCardPadding 10px;
+    min-height: 40px;
+
+    &.--no-title {
+      display: none;
+    }
+  }
+
+  .DataCard__body {
+    padding: @dataCardPadding;
+  }
+}

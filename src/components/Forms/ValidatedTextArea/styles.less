@@ -1,0 +1,24 @@
+@import '../../../styles/_base.less';
+@import '../../../styles/_forms_base.less';
+
+.ValidatedTextArea {
+  textarea {
+    font-size: 16px;
+    font-family: proxima-nova, Arial, 'Open Sans';
+  }
+
+  .input-flags {
+    .input-flags-style();
+  }
+
+  .error {
+    &.touched {
+      .input-error-style();
+    }
+  }
+
+  .pt-input:disabled {
+    color: @dark-gray6;
+    background-color: @light-gray4;
+  }
+}

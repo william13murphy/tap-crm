@@ -1,0 +1,34 @@
+@import '../../styles/_base.less';
+
+@fieldset-border: 1px solid @light-gray1;
+
+.Fieldset {
+  border-radius: 4px 4px 0 0;
+  border: @fieldset-border;
+  position: relative;
+
+  .Fieldset__title {
+    background-color: @blue1;
+    border-radius: 4px 4px 0 0;
+    padding: 10px;
+    color: @light-gray5;
+    font-weight: normal;
+    height: 40px;
+  }
+
+  .Fieldset__content {
+    padding: 10px;
+  }
+
+  .Fieldset__toolbar {
+    display: flex;
+    justify-content: flex-end;
+    // position: absolute;
+    // top: 50px;
+    // right: 10px;
+
+    > .pt-button {
+      margin-left: 10px;
+    }
+  }
+}

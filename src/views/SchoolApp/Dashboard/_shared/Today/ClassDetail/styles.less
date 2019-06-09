@@ -1,0 +1,48 @@
+@import '../../../../../../styles/_base.less';
+
+.ClassDetailPage {
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  .PageHeader {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin-top: 10px;
+    }
+
+    @media @tablet-small {
+      display: block;
+
+      a {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .ViewSwitcherLink {
+    order: 3;
+
+    @media @tablet-small {
+      // float: right;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  .AttendanceViewButton,
+  .InstructorViewButton {
+    span {
+      padding-right: 12px;
+    }
+  }
+
+  .CheckInStudentLink {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+}

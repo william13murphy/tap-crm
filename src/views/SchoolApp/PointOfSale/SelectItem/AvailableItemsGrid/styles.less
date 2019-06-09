@@ -1,0 +1,81 @@
+@import '../../../../../styles/_base.less';
+
+.AvailableItemsGrid {
+  overflow: auto;
+  display: flex;
+  min-height: 200px;
+  max-height: 600px;
+  width: 100%;
+  background-color: @gray95;
+
+  .TotalRecordsCount {
+    display: none;
+  }
+
+  .ReactTable {
+    width: 100%;
+
+    .rt-td {
+      font-size: 15px;
+      display: flex;
+      padding: 5px;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+    }
+
+    rt-thead {
+      height: 20px;
+      font-size: 16px;
+    }
+
+    .rt-th {
+      background: #0e5a8a;
+
+      .rt-resizable-header-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: @white;
+        font-size: 16px;
+        height: 20px;
+      }
+    }
+
+    .rt-tr.-even {
+      .rt-td {
+        background: @light-gray3;
+      }
+    }
+  }
+
+  .Quantity {
+    display: flex;
+
+    span {
+      display: flex;
+      padding: 5px;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.Summary {
+  border-radius: 4px;
+
+  .CartSummary {
+    border-radius: 4px;
+
+    .CartHeader {
+      border-radius: 4px;
+
+      .CartColumn {
+        background-color: #0e5a8a;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,81 @@
+.ProgramDetailPage {
+  .AddSchoolStyleRankForm {
+    .TextField.pt-label {
+      &.TextField__Classes,
+      &.TextField__Weeks {
+        width: 300px;
+      }
+    }
+
+    .SkillsList__container {
+      padding-bottom: 15px;
+    }
+
+    .RankRequirementSelectField {
+      min-width: 200px;
+    }
+
+    .Close__selectskill {
+      margin-bottom: 8px;
+    }
+
+    // Quick hack: Put New Rank button into pt-card to mimic layout and get left-alignment.
+    .AddNewRankWrapper {
+      box-shadow: none !important;
+      padding: 0 !important;
+      background: transparent !important;
+    }
+
+    .SchoolRanksList {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .SchoolRank {
+      max-width: 800px;
+    }
+
+    .BeltTypeSelectItem {
+      .BeltTypeSelectItem__belt-image {
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
+
+    .ProgramRankDetailPage {
+      .EditRank {
+        float: right;
+      }
+    }
+
+    .Modal__window__content {
+      overflow-y: unset !important;
+    }
+
+    .Promote {
+      margin: 10px 0;
+      width: 100px;
+    }
+  }
+  .JustifyRight {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ProgramInfoWrapper {
+    display: flex;
+    justify-content: center;
+
+    .FormWrapper {
+      max-width: 800px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .AlignRight {
+        text-align: right;
+      }
+    }
+  }
+}

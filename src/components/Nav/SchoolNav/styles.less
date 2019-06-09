@@ -1,0 +1,49 @@
+@import '../../../styles/_base.less';
+
+.EFCApp .SchoolNav {
+  > .pt-navbar {
+    top: @efc-nav-height;
+  }
+}
+
+.SchoolNav > nav.pt-navbar {
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  height: @nav-height;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: @nav-background;
+  box-shadow: none;
+  display: flex;
+  //
+  > .pt-navbar-group {
+    height: @nav-height;
+
+    &:first-child {
+      flex-grow: 1;
+    }
+  }
+
+  .Nav__logo-container {
+    margin-right: 20px;
+    height: @nav-height;
+    width: @nav-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Nav__divider {
+    margin: 0;
+  }
+
+  // Wrap SchoolSearchFuzzyContainer / SearchSchoolPeople,
+  // Set a static width during loading,
+  // And contain the loader with position: relative.
+  .SearchSchoolPeople__wrap {
+    min-width: 59px;
+    position: relative;
+  }
+}

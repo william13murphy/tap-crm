@@ -1,0 +1,38 @@
+.ClassProgressionDataGrid {
+  // .Action__cell {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 100%;
+  // }
+  //
+  // > h4 {
+  //   padding: 20px;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
+  .ClassProgressionDataGrid__StudentPicture {
+    height: 50px;
+    width: auto;
+  }
+
+  .Skills__cell {
+    display: flex;
+  }
+
+  // fix layout for buttons in actions column:
+  .Action__cell {
+    > * {
+      margin-right: 5px;
+    }
+
+    .GenericStatefulFormContainer {
+      display: inline-block;
+
+      form {
+        display: inline-block;
+      }
+    }
+  }
+}

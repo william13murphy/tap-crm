@@ -1,0 +1,63 @@
+@import '../../../../styles/_base.less';
+
+@set-password-box-shadow: 0 4px 16px @gray5;
+@set-password-form-width: 350px;
+
+.Page.CreatePasswordPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center; // Disabled justify-content: center; bad for smaller height screens.
+  background-color: @light-gray1;
+  overflow-y: auto;
+
+  .TapLogo__small {
+    width: 50px;
+    margin: 20px 0;
+  }
+
+  .PostFailMessage {
+    width: @set-password-form-width;
+    flex-shrink: 0;
+  }
+
+  .FormSuccess {
+    .FormSuccess__description {
+      padding-bottom: 20px;
+    }
+
+    .FormSuccess__actions {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .PageTitle {
+    background-color: @light-gray2;
+    padding: 10px 0;
+    width: @set-password-form-width;
+    box-shadow: @set-password-box-shadow;
+  }
+
+  .PasswordRequirementsCallout {
+    width: @set-password-form-width;
+    box-shadow: @set-password-box-shadow;
+  }
+
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  .ResetPasswordForm {
+    padding: 20px;
+    background-color: @light-gray4;
+    box-shadow: @set-password-box-shadow;
+    width: @set-password-form-width;
+    margin-bottom: 20px;
+  }
+}
