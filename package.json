@@ -85,7 +85,7 @@
     "logrocket-react": "^3.0.0",
     "moment": "^2.23.0",
     "moment-timezone": "^0.5.23",
-    "papaparse": "^4.6.3",
+    "papaparse": "^5.3.0",
     "rc-time-picker": "^3.5.0",
     "react": "^16.2.0",
     "react-big-calendar": "^0.17.0",
